@@ -1,137 +1,59 @@
-# Next.js + tRPC + Drizzle Dashboard Starter
+# SFGT Website
 
-A production-ready boilerplate for building admin dashboards with role-based access, built on Next.js 16, tRPC, Drizzle ORM, and Better Auth.
+The corporate website for **Sulemane Faruk General Trading LLC**, based in Dubai. It includes an English/Arabic product catalogue, Toshiba and Tekbatt ranges, commodities, company information and quotation enquiries.
 
-## SFGT website
+**Website:** [sfgt-tbts.com](https://sfgt-tbts.com/)
 
-The repository now includes the SFGT corporate website with an English/Arabic product catalogue. Public pages use a light theme; inherited admin/auth routes are hidden from the public website. Enquiry delivery setup is documented in [docs/enquiry-delivery.md](docs/enquiry-delivery.md).
+**Repository:** [codecret/sfgt-website](https://github.com/codecret/sfgt-website)
 
-The selected English/Arabic supplier design is now the main Next.js homepage, including Toshiba, Tekbatt, commodities, generated visuals and animated contact icons. Its reviewed HTML sources remain in [previews/supplier-direction](previews/supplier-direction/README.md); `scripts/sync-supplier-home.py` prepares the markup and assets used by `src/app/[locale]/(supplier)/page.tsx`. The production domain is [sfgt-tbts.com](https://sfgt-tbts.com).
+The reusable dashboard starter is maintained separately in [codecret/next-trpc-drizzle-dashboard](https://github.com/codecret/next-trpc-drizzle-dashboard). This repository retains the SFGT website and its existing history.
 
-The homepage prepares an email draft; the separate Contact page can send enquiries only after its delivery service is configured. This source includes the restored supplier design and the latest corporate homepage refinement, while preserving the earlier design commits in Git history. See the [handover status](docs/source-audit/HANDOVER.md) and [domain connection record](docs/delivery/DOMAIN-CUTOVER-2026-10-27.md) for release context. Confirm the deployed commit before treating a local design change as published; mailbox backup and enquiry inbox delivery remain separate work.
+## Development
 
-## Features
-
-- 🔒 **Authentication** — email/password auth with Better Auth (sessions, password reset, rate limiting)
-- 👥 **Role-based access** — `user` / `admin` roles enforced in middleware, layouts, and tRPC procedures
-- 🛡️ **Type-safe API** — end-to-end types with tRPC 11 + Zod validation + superjson
-- 🗄️ **Drizzle ORM** — PostgreSQL schema, migrations, and Drizzle Studio
-- ✅ **Validated env vars** — fail-fast environment validation with `@t3-oss/env-nextjs`
-- 🌍 **i18n** — English/Arabic out of the box with next-intl (locale-prefixed routes)
-- 🌗 **Light/dark mode** — via next-themes
-- 📊 **Admin dashboard** — charts (Recharts), stat cards, and a users CRUD with TanStack Table
-- 🧩 **shadcn/ui components** — accessible Radix-based UI, fully customizable
-- 📱 Fully responsive with a collapsible sidebar
-
-## Tech Stack
-
-| Layer     | Technology                                                                   |
-| --------- | ---------------------------------------------------------------------------- |
-| Framework | [Next.js 16](https://nextjs.org) (App Router, Turbopack) + React 19          |
-| API       | [tRPC 11](https://trpc.io)                                                   |
-| Database  | PostgreSQL + [Drizzle ORM](https://orm.drizzle.team)                         |
-| Auth      | [Better Auth](https://www.better-auth.com) (admin + username plugins)        |
-| UI        | [Tailwind CSS](https://tailwindcss.com) + [shadcn/ui](https://ui.shadcn.com) |
-| Forms     | [React Hook Form](https://react-hook-form.com) + [Zod](https://zod.dev)      |
-| Tables    | [TanStack Table](https://tanstack.com/table/latest)                          |
-| i18n      | [next-intl](https://next-intl.dev)                                           |
-| Email     | [Resend](https://resend.com) + React Email (optional, for password reset)    |
-
-## Getting Started
-
-### 1. Clone and install
+Built with Next.js 16, React 19, TypeScript, next-intl and Tailwind CSS. The inherited dashboard uses tRPC, Drizzle/PostgreSQL, Better Auth and shadcn/ui; its admin/auth routes are disabled on the public website by default.
 
 ```sh
-git clone <your-repo-url> my-app
-cd my-app
-npm install
-```
-
-### 2. Set up environment variables
-
-```sh
-cp .env.example .env
-```
-
-Fill in `DATABASE_URL` (PostgreSQL) and generate a secret:
-
-```sh
-openssl rand -base64 32   # → BETTER_AUTH_SECRET
-```
-
-### 3. Set up the database
-
-Apply the committed migrations (in `drizzle/`):
-
-```sh
-npm run db:migrate
-```
-
-After changing the schema in `src/db/schema/`, generate a new migration with `npm run db:generate` and apply it with `npm run db:migrate`. For rapid prototyping you can push the schema directly with `npm run db:push` instead.
-
-### 4. Run the dev server
-
-```sh
+git clone https://github.com/codecret/sfgt-website.git
+cd sfgt-website
+npm ci
+cp .env.example .env.local
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Configure the local environment using `.env.example`. Do not commit credentials or copy production mailbox credentials into the starter repository.
 
-> **Tip:** new sign-ups get the `user` role. Promote an admin by setting `role = 'admin'` on the `user` table (e.g. via `npm run db:studio`).
+## Commands
 
-## Scripts
+| Command                   | Purpose                                           |
+| ------------------------- | ------------------------------------------------- |
+| `npm run dev`             | Start the local development server                |
+| `npm run build`           | Build for production                              |
+| `npm run start`           | Serve the production build                        |
+| `npm run lint`            | Run ESLint                                        |
+| `npm run typecheck`       | Check TypeScript                                  |
+| `npm run check:catalogue` | Check catalogue data and assets                   |
+| `npm run db:generate`     | Generate database migrations after schema changes |
+| `npm run db:migrate`      | Apply committed migrations                        |
 
-| Script                | Description                       |
-| --------------------- | --------------------------------- |
-| `npm run dev`         | Start the dev server              |
-| `npm run build`       | Production build                  |
-| `npm run start`       | Serve the production build        |
-| `npm run lint`        | Lint with ESLint                  |
-| `npm run typecheck`   | TypeScript check (no emit)        |
-| `npm run format`      | Format with Prettier              |
-| `npm run db:push`     | Push schema to the database (dev) |
-| `npm run db:generate` | Generate SQL migrations           |
-| `npm run db:migrate`  | Apply migrations                  |
-| `npm run db:studio`   | Open Drizzle Studio               |
+## Source layout
 
-## Project Structure
+- `src/app/[locale]/(supplier)/page.tsx` renders the public homepage.
+- `src/features/landing/` contains the website design, navigation, sketches and hero lighting.
+- `src/features/catalogue/` owns product and category data.
+- `src/features/contact/` and `src/app/api/enquiry/` handle quotation enquiries.
+- `messages/en.json` and `messages/ar.json` contain translations.
+- `public/images/` contains product photographs and marketing artwork.
 
-Feature-based structure 🗂 — each feature owns its components, server router, and types.
+The original brand logo is preserved. Marketing artwork and decorative sketches are not documentary evidence of company facilities.
 
-```
-src/
-├── app/
-│   ├── [locale]/          # Locale-prefixed routes (en, ar)
-│   │   ├── page.tsx       # Landing page
-│   │   ├── auth/          # Sign in / sign up / password reset
-│   │   ├── admin/         # Admin dashboard + users management
-│   │   └── dashboard/     # User dashboard
-│   └── api/
-│       ├── auth/[...all]/ # Better Auth handler
-│       └── trpc/[trpc]/   # tRPC handler
-├── components/            # Shared components (sidebar, ui/ = shadcn)
-├── db/                    # Drizzle instance, schema, queries
-├── features/              # Feature modules (landing, auth, users, admin-dashboard)
-├── i18n/                  # next-intl routing + request config
-├── lib/                   # auth, env validation, trpc setup, email
-├── server/                # tRPC root router
-├── utils/                 # Hooks and helpers
-└── proxy.ts               # Middleware: auth guard + i18n routing
-messages/                  # Translation files (en.json, ar.json)
-```
+## Deployment and enquiries
 
-## Extending
+The website deploys through the existing Vercel project **`sfgt-website`**, connected to the `main` branch of this repository. The production domain and mail DNS are managed separately from GitHub repository naming.
 
-- **Add a tRPC router:** create `src/features/<feature>/server/<name>Router.ts` and register it in `src/server/index.ts`. Use `publicProcedure`, `protectedProcedure`, or `protectedAdminProcedure` from `src/lib/trpc/init.ts`.
-- **Add a table:** define it in `src/db/schema/`, then `npm run db:generate && npm run db:migrate`.
-- **Add an env var:** declare it in `src/lib/env.ts` and `.env.example`.
-- **Add a locale:** add the locale to `src/i18n/routing.ts` and create `messages/<locale>.json`.
-- **Password reset emails:** set `RESEND_API_KEY`, uncomment `src/lib/email/resend.ts`, and wire it into `sendResetPassword` in `src/lib/auth.ts`. In development the reset link is logged to the console.
+See [enquiry delivery](docs/enquiry-delivery.md) for server-side mail configuration, [homepage design](docs/premium-home-design.md) for the current design, and [hero lighting](docs/hero-lighting-assets.md) for image provenance and rebuild instructions. Verify the deployed commit before reporting that a local change is live.
 
-## Acknowledgments
+Earlier source investigations and release notes remain in [docs/source-audit](docs/source-audit/HANDOVER.md) and [docs/delivery](docs/delivery/DOMAIN-CUTOVER-2026-10-27.md).
 
-- [Shadcn Admin Dashboard](https://github.com/satnaing/shadcn-admin) for some components.
+## Acknowledgments and license
 
-## License
-
-Licensed under the [MIT License](LICENSE).
+Some dashboard components originate from [Shadcn Admin Dashboard](https://github.com/satnaing/shadcn-admin). The project retains its [MIT License](LICENSE).

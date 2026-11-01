@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Admin dashboard boilerplate: Next.js 16 (App Router) + tRPC 11 + Drizzle ORM (PostgreSQL) + Better Auth + next-intl + shadcn/ui.
+SFGT corporate website and bilingual product catalogue, built on Next.js 16 (App Router) + tRPC 11 + Drizzle ORM (PostgreSQL) + Better Auth + next-intl + shadcn/ui.
 
 ## Commands
 
