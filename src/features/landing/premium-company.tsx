@@ -226,7 +226,7 @@ export async function PremiumFooter({ locale }: LocaleProps) {
   const productLinks = [
     { key: "batteries", href: "/products/batteries" },
     { key: "lighting", href: "/products/led-lighting" },
-    { key: "tekbatt", href: "/#tekbatt" },
+    { key: "tekbatt", href: "https://tekbatt.com/shop/" },
     { key: "commodities", href: "/products/commodities" },
     { key: "allProducts", href: "/products" },
   ] as const;

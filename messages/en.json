@@ -754,10 +754,7 @@
         "label": "Explore our product ranges",
         "batteries": "Batteries",
         "lighting": "Lighting",
-        "commodities": "Commodities",
-        "tekbatt": "Tekbatt",
-        "previous": "Previous categories",
-        "next": "More categories"
+        "commodities": "Commodities"
       },
       "commodities": {
         "title": "Commodities & Commercial Supplies",
@@ -788,14 +785,6 @@
         "construction": "Construction Materials",
         "hospitality": "Hospitality Supplies",
         "otherFood": "Other Food Products"
-      },
-      "tekbatt": {
-        "title": "Explore Tekbatt",
-        "description": "Alkaline and rechargeable battery ranges for everyday devices.",
-        "explore": "Visit Tekbatt",
-        "ultra": "Alkaline Ultra",
-        "power": "Alkaline Power",
-        "rechargeable": "Rechargeable"
       },
       "quickContact": "Quick contact",
       "whatsapp": "Chat with SFGT on WhatsApp",

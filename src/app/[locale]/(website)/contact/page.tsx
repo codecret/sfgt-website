@@ -147,24 +147,15 @@ export default async function ContactPage({ searchParams }: Props) {
               aria-hidden="true"
             />
             <h2 className="font-semibold">{t("toshiba")}</h2>
-            <div className="mt-3 space-y-3 text-sm text-muted-foreground">
-              <p>
-                <a
-                  href={`mailto:${company.toshibaEmail}`}
-                  className="hover:underline"
-                >
-                  {company.toshibaEmail}
-                </a>
-              </p>
-              <p>
-                <a
-                  href={`mailto:${company.toshibaAlternativeEmail}`}
-                  className="hover:underline"
-                >
-                  {company.toshibaAlternativeEmail}
-                </a>
-              </p>
-            </div>
+            <p className="mt-3 text-sm text-muted-foreground">
+              <a
+                href={`mailto:${company.toshibaEmail}`}
+                className="hover:underline"
+                dir="ltr"
+              >
+                {company.toshibaEmail}
+              </a>
+            </p>
           </section>
           <section className="contact-hours">
             <Clock

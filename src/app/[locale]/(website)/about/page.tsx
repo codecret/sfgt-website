@@ -37,7 +37,7 @@ export default async function AboutPage() {
   const locale = await getLocale();
   const activities = [
     { key: "toshiba", Icon: Lightbulb, href: "/#toshiba-products" },
-    { key: "tekbatt", Icon: Battery, href: "/#tekbatt" },
+    { key: "tekbatt", Icon: Battery, href: "https://tekbatt.com/shop/" },
     { key: "commodities", Icon: Boxes, href: "/products/commodities" },
   ];
 

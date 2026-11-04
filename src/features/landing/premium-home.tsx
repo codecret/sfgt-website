@@ -47,11 +47,6 @@ export async function PremiumHome({
       href: "/products/commodities",
       image: "/images/supplier-home/generated/seeds-v1.webp",
     },
-    {
-      key: "tekbatt",
-      href: "/#tekbatt",
-      image: "/images/supplier-home/tekbatt/alkaline-ultra-studio.webp",
-    },
   ];
   const commodityLinks = [
     { key: "sugar", slug: "sugar", image: "sugar-v1.webp" },
@@ -65,24 +60,6 @@ export async function PremiumHome({
     { key: "hospitality", slug: "hospitality", icon: Package },
     { key: "otherFood", slug: "other-food-products", icon: Wheat },
   ];
-  const tekbattLinks = [
-    {
-      key: "ultra",
-      slug: "alkaline-ultra",
-      image: "alkaline-ultra-studio.webp",
-    },
-    {
-      key: "power",
-      slug: "alkaline-power",
-      image: "alkaline-power-studio.webp",
-    },
-    {
-      key: "rechargeable",
-      slug: "rechargeable-value-energy",
-      image: "rechargeable-studio.webp",
-    },
-  ];
-
   return (
     <div className="premium-home public-surface supplier-home">
       <main id="main-content" tabIndex={-1}>
@@ -132,8 +109,6 @@ export async function PremiumHome({
 
         <CategoryNavigation
           label={t("categories.label")}
-          previousLabel={t("categories.previous")}
-          nextLabel={t("categories.next")}
           allLabel={t("viewAll")}
         >
           {categoryLinks.map((category) => (
@@ -214,49 +189,6 @@ export async function PremiumHome({
               {t("commodities.viewAll")}
               <ArrowRight aria-hidden="true" />
             </Link>
-          </div>
-        </section>
-
-        <section
-          className="premium-tekbatt premium-container"
-          id="tekbatt"
-          aria-labelledby="premium-tekbatt-title"
-        >
-          <div className="premium-tekbatt-copy" data-premium-reveal>
-            <h2 id="premium-tekbatt-title">{t("tekbatt.title")}</h2>
-            <p>{t("tekbatt.description")}</p>
-            <a
-              href="https://tekbatt.com/shop/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="premium-link"
-            >
-              {t("tekbatt.explore")}
-              <ArrowRight aria-hidden="true" />
-            </a>
-          </div>
-          <div className="premium-tekbatt-ranges">
-            {tekbattLinks.map((item) => (
-              <a
-                href={`https://tekbatt.com/product-category/${item.slug}/`}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={item.key}
-                data-premium-reveal
-              >
-                <Image
-                  src={`/images/supplier-home/tekbatt/${item.image}`}
-                  alt=""
-                  width={136}
-                  height={112}
-                  sizes="(max-width: 600px) 26vw, 120px"
-                />
-                <span>
-                  {t(`tekbatt.${item.key}`)}
-                  <ArrowRight aria-hidden="true" />
-                </span>
-              </a>
-            ))}
           </div>
         </section>
 

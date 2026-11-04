@@ -52,7 +52,7 @@ export function Footer() {
                 </li>
               ))}
               <li>
-                <Link href="/#tekbatt">
+                <Link href="https://tekbatt.com/shop/">
                   {locale === "ar" ? "بطاريات Tekbatt" : "Tekbatt batteries"}
                 </Link>
               </li>

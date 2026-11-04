@@ -28,8 +28,7 @@ export const company = {
   phone: "+971 4 336 4633",
   mobile: "+971 56 500 6024",
   whatsapp: "+971 50 342 0157",
-  toshibaEmail: "toshibabts.gcc@toshibabts.com",
-  toshibaAlternativeEmail: "toshibabts.gcc@gmail.com",
+  toshibaEmail: "suleimane.generaltrading@gmail.com",
   address:
     "Office and Warehouse No. 7, Al-Qusais Industrial Area 1, near Ministry of Labour",
   city: "Dubai, United Arab Emirates",
