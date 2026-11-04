@@ -439,7 +439,7 @@
       ],
       "ranges": [],
       "productCount": 1,
-      "image": "/images/catalogue/7a309a8fd7-06082020015139charger1.jpg"
+      "image": "/images/catalogue/toshiba-charger-pack-front.webp"
     },
     {
       "slug": "powerbanks",
@@ -5567,10 +5567,7 @@
       ],
       "benefits": [],
       "technical": [],
-      "images": [
-        "/images/catalogue/7a309a8fd7-06082020015139charger1.jpg",
-        "/images/catalogue/9dd4935686-06082020015156charger2.jpg"
-      ],
+      "images": ["/images/catalogue/toshiba-charger-pack-front.webp"],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=52",
         "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=52"
@@ -5580,6 +5577,7 @@
       "category": "chargers",
       "family": "",
       "imageSources": [
+        "https://static.hayapek.com.br/produtos/73205/550/1.webp",
         "https://www.toshibabts.com/galimg/06082020015139charger1.jpg",
         "https://www.toshibabts.com/galimg/06082020015156charger2.jpg",
         "https://www.toshibabts.com/batteryimage/"

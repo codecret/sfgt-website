@@ -1057,13 +1057,19 @@
     "source": "https://www.toshibabts.com/galimg/06082020015139charger1.jpg",
     "path": "/images/catalogue/7a309a8fd7-06082020015139charger1.jpg",
     "bytes": 41176,
+    "retained": false
+  },
+  {
+    "source": "https://static.hayapek.com.br/produtos/73205/550/1.webp",
+    "path": "/images/catalogue/toshiba-charger-pack-front.webp",
+    "bytes": 132200,
     "retained": true
   },
   {
     "source": "https://www.toshibabts.com/galimg/06082020015156charger2.jpg",
     "path": "/images/catalogue/9dd4935686-06082020015156charger2.jpg",
     "bytes": 247021,
-    "retained": true
+    "retained": false
   },
   {
     "source": "https://www.toshibabts.com/galimg/060820200203211b.jpg",
