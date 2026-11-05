@@ -16,6 +16,19 @@ export const enquiryDivisions = [
 
 export type EnquiryDivision = (typeof enquiryDivisions)[number] | "";
 
+export const enquiryBuyerTypes = [
+  "retailer",
+  "wholesaler",
+  "distributor",
+  "other",
+] as const;
+
+export const enquiryContactPreferences = [
+  "email",
+  "phone",
+  "whatsapp",
+] as const;
+
 const defaultMessages: EnquiryMessages = {
   required: "This field is required.",
   invalidEmail: "Enter a valid email address.",
@@ -38,7 +51,28 @@ export function createEnquirySchema(
       .email(messages.invalidEmail)
       .max(254, messages.maxLength),
     division: z.enum(["", ...enquiryDivisions]),
+    locale: z.enum(["en", "ar"]).optional().default("en"),
     phone: z.string().trim().max(50, messages.maxLength).optional(),
+    companyCountry: z
+      .string()
+      .trim()
+      .max(100, messages.maxLength)
+      .optional()
+      .default(""),
+    buyerType: z
+      .enum(["", ...enquiryBuyerTypes])
+      .optional()
+      .default(""),
+    monthlyVolume: z
+      .string()
+      .trim()
+      .max(250, messages.maxLength)
+      .optional()
+      .default(""),
+    contactPreference: z
+      .enum(["", ...enquiryContactPreferences])
+      .optional()
+      .default(""),
     company: z.string().trim().max(150, messages.maxLength),
     product: z.string().trim().max(250, messages.maxLength),
     quantity: z.string().trim().max(250, messages.maxLength),
@@ -52,4 +86,4 @@ export function createEnquirySchema(
   });
 }
 
-export type EnquiryValues = z.infer<ReturnType<typeof createEnquirySchema>>;
+export type EnquiryValues = z.input<ReturnType<typeof createEnquirySchema>>;

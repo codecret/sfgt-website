@@ -2912,5 +2912,17 @@
     "path": "/images/catalogue/3b4d40869e-30092020090005LR1130-BP-1C.jpg",
     "bytes": 194343,
     "retained": true
+  },
+  {
+    "source": "https://www.toshiba-lifestyle.com/sites/default/files/2021-06/alkaline_high_img_11.jpg",
+    "path": "/images/catalogue/toshiba-high-power-aa-12-pack.jpg",
+    "bytes": 31871,
+    "retained": true
+  },
+  {
+    "source": "https://www.toshiba-lifestyle.com/sites/default/files/2021-06/alkaline_high_img_28.jpg",
+    "path": "/images/catalogue/toshiba-high-power-aa-20-pack.jpg",
+    "bytes": 22791,
+    "retained": true
   }
 ]

@@ -1,6 +1,10 @@
 import { createHash } from "node:crypto";
 import { z } from "zod";
 import { createEnquirySchema, type EnquiryValues } from "../types";
+import {
+  enquiryReference,
+  type EnquirySubmissionResult,
+} from "./enquiry-submission";
 
 const maxBodyBytes = 24_576;
 const windowMs = 10 * 60 * 1000;
@@ -13,11 +17,13 @@ type EnquiryError =
   | "INVALID_INPUT"
   | "FORBIDDEN"
   | "RATE_LIMITED"
-  | "DELIVERY_FAILED";
+  | "DELIVERY_FAILED"
+  | "DELIVERY_PENDING"
+  | "REQUEST_CONFLICT";
 
-function failure(error: EnquiryError, status: number) {
+function failure(error: EnquiryError, status: number, reference?: string) {
   return Response.json(
-    { error },
+    { error, ...(reference ? { reference } : {}) },
     {
       status,
       headers: {
@@ -89,11 +95,16 @@ async function readBoundedJson(request: Request): Promise<unknown> {
 export function createEnquiryHandler({
   enabled,
   deliver,
+  submit,
   canonicalOrigin,
   limit = createEnquiryLimiter(),
 }: {
   enabled: () => boolean;
   deliver: (values: EnquiryValues, requestId: string) => Promise<boolean>;
+  submit?: (
+    values: EnquiryValues,
+    requestId: string
+  ) => Promise<EnquirySubmissionResult>;
   canonicalOrigin?: string;
   limit?: ReturnType<typeof createEnquiryLimiter>;
 }) {
@@ -153,6 +164,33 @@ export function createEnquiryHandler({
     if (!limit(`email:${hash(values.email.toLowerCase())}`, 3)) {
       return failure("RATE_LIMITED", 429);
     }
+    if (submit) {
+      let receipt: EnquirySubmissionResult;
+      try {
+        receipt = await submit(values, requestId);
+      } catch {
+        return failure("DELIVERY_PENDING", 502, enquiryReference(requestId));
+      }
+      switch (receipt.status) {
+        case "sent":
+          return Response.json(
+            {
+              success: true,
+              reference: receipt.reference,
+              acknowledgementSent: receipt.acknowledgementSent,
+            },
+            { headers: { "Cache-Control": "no-store" } }
+          );
+        case "pending":
+          return failure("DELIVERY_PENDING", 409, receipt.reference);
+        case "conflict":
+          return failure("REQUEST_CONFLICT", 409);
+        case "rate_limited":
+          return failure("RATE_LIMITED", 429);
+        case "failed":
+          return failure("DELIVERY_FAILED", 502, receipt.reference);
+      }
+    }
     try {
       if (!(await deliver(values, requestId))) {
         return failure("DELIVERY_FAILED", 502);
@@ -161,7 +199,11 @@ export function createEnquiryHandler({
       return failure("DELIVERY_FAILED", 502);
     }
     return Response.json(
-      { success: true },
+      {
+        success: true,
+        reference: enquiryReference(requestId),
+        acknowledgementSent: false,
+      },
       { headers: { "Cache-Control": "no-store" } }
     );
   };

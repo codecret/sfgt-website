@@ -1525,12 +1525,14 @@
     {
       "id": "commodity-corn-gno",
       "slug": "corn-gno",
-      "name": "Corn GNO",
+      "name": "Corn — variety on enquiry",
       "division": "commodities",
       "sourceCategories": [
         "Seeds"
       ],
-      "description": [],
+      "description": [
+        "Contact our team to confirm the corn variety, GMO status, grade, origin and packaging for your requirements."
+      ],
       "productCode": "",
       "sfgtCode": "",
       "tables": [],
@@ -1546,7 +1548,7 @@
         "corn"
       ],
       "notes": [
-        "Listed as “Corn GNO” in the source catalogue. Please confirm the required variety with our team."
+        "Variety and GMO status require confirmation before quotation."
       ],
       "category": "seeds",
       "family": "",
@@ -3293,7 +3295,7 @@
     {
       "id": "battery-4",
       "slug": "high-power-aa-bp-10-x10-blister-pack",
-      "name": "HIGH POWER AA BP-10 X10 (BLISTER PACK)",
+      "name": "HIGH POWER AA BP-1X10 (STRIP BLISTER PACK)",
       "division": "batteries",
       "sourceCategories": [
         "ALKAINE BATTERY",
@@ -3302,23 +3304,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCP BP-10 X10",
-      "sfgtCode": "00152670",
+      "productCode": "LR6GCP BP-1X10CN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "10",
-              "10",
-              "80",
-              "2,400",
+              "",
+              "",
               ""
             ]
           ]
@@ -3337,24 +3337,26 @@
       ],
       "technical": [],
       "images": [
-        "/images/catalogue/8fad1135cb-01102020041558LR03GCP-BP1X10CN.png",
+        "/images/catalogue/d8f8dca68a-01102020042027LR6GCP-BP1X10CN.png",
         "/images/catalogue/c3e8b94511-220620200914092.jpg",
         "/images/catalogue/063ec4f579-220620200913403.jpg"
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=4",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=4"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=4",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
       "imageSources": [
         "https://www.toshibabts.com/galimg/01102020041558LR03GCP BP1X10CN.png",
         "https://www.toshibabts.com/galimg/220620200914092.jpg",
-        "https://www.toshibabts.com/batteryimage/220620200913403.jpg"
+        "https://www.toshibabts.com/batteryimage/220620200913403.jpg",
+        "https://www.toshibabts.com/galimg/01102020042027LR6GCP BP1X10CN.png"
       ],
       "categoryPath": [
         "batteries",
@@ -3372,25 +3374,23 @@
         "High Power"
       ],
       "description": [
-        "pastingToshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
+        "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCP BP-2",
-      "sfgtCode": "00152649",
+      "productCode": "LR6GCP BP-2CN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "2",
-              "12",
-              "144",
-              "6,912",
+              "",
+              "",
               ""
             ]
           ]
@@ -3415,11 +3415,12 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=5",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=5"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=5",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
@@ -3446,23 +3447,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCP BP-4",
-      "sfgtCode": "00152650",
+      "productCode": "LR6GCP BP-4CN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "4",
-              "12",
-              "48",
-              "6,144",
+              "",
+              "",
               ""
             ]
           ]
@@ -3487,11 +3486,12 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=6",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=6"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=6",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
@@ -3518,23 +3518,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCP BP10MS4F",
-      "sfgtCode": "00152660",
+      "productCode": "LR6GCP BP10MS4FCN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "10",
-              "12",
-              "48",
-              "3,600",
+              "",
+              "",
               ""
             ]
           ]
@@ -3559,11 +3557,12 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=59",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=59"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=59",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
@@ -3590,23 +3589,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCP BP12MS4F",
-      "sfgtCode": "00152661",
+      "productCode": "LR6GCP BP12MS4FCN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "12",
-              "6",
-              "24",
-              "1920",
+              "",
+              "",
               ""
             ]
           ]
@@ -3625,24 +3622,26 @@
       ],
       "technical": [],
       "images": [
-        "/images/catalogue/45bfe77cc9-01102020044228LR03GCP-BP12MS4FCN.jpg",
+        "/images/catalogue/toshiba-high-power-aa-12-pack.jpg",
         "/images/catalogue/4f841fd528-060820201144408b.jpg",
         "/images/catalogue/799e548260-060820201144178c.jpg"
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=60",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=60"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=60",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
       "imageSources": [
         "https://www.toshibabts.com/galimg/01102020044228LR03GCP BP12MS4FCN.jpg",
         "https://www.toshibabts.com/galimg/060820201144408b.jpg",
-        "https://www.toshibabts.com/batteryimage/060820201144178c.jpg"
+        "https://www.toshibabts.com/batteryimage/060820201144178c.jpg",
+        "https://www.toshiba-lifestyle.com/sites/default/files/2021-06/alkaline_high_img_11.jpg"
       ],
       "categoryPath": [
         "batteries",
@@ -3662,23 +3661,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCP BP6 2F",
-      "sfgtCode": "00152658",
+      "productCode": "LR6GCP BP6 2FCN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "6",
-              "12",
-              "96",
-              "3,072",
+              "",
+              "",
               ""
             ]
           ]
@@ -3703,11 +3700,12 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=61",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=61"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=61",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
@@ -3734,23 +3732,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCNN MP-12 SS",
-      "sfgtCode": "00152621",
+      "productCode": "LR6GCP MP-12CN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "12",
-              "16",
-              "64",
-              "2,880",
+              "",
+              "",
               ""
             ]
           ]
@@ -3769,9 +3765,6 @@
       ],
       "technical": [],
       "images": [
-        "/images/catalogue/8653b2c37b-01102020044345LR6GCP-BP8MS4FCN.jpg",
-        "/images/catalogue/6ab5b4aa58-0608202011542110b.jpg",
-        "/images/catalogue/ca0d84941d-0608202011535310c.jpg",
         "/images/catalogue/856a4b4301-01102020044614LR6GCP-MP-12CN.jpg",
         "/images/catalogue/bbd50f861f-0708202012004411b.jpg",
         "/images/catalogue/c5acc33d29-070820201200217c.jpg"
@@ -3780,11 +3773,12 @@
         "https://www.toshibabts.com/ProductDetails.aspx?id=62",
         "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=62",
         "https://www.toshibabts.com/ProductDetails.aspx?id=63",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=63"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=63",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "sourceAliases": [
         "HIGH POWER AA MP-12 SHRINK PACK",
@@ -3818,23 +3812,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCNN MP-16 SS",
-      "sfgtCode": "00152622",
+      "productCode": "LR6GCP MP-16CN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "16",
-              "6",
-              "24",
-              "2,160",
+              "",
+              "",
               ""
             ]
           ]
@@ -3859,11 +3851,12 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=64",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=64"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=64",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
@@ -5534,46 +5527,48 @@
     {
       "id": "battery-52",
       "slug": "charger",
-      "name": "CHARGER",
+      "name": "Toshiba USB charger with 4 AA rechargeable batteries",
       "division": "batteries",
       "sourceCategories": [
         "RECHARGEABLE",
         "Chargers"
       ],
       "description": [
-        "Toshiba AA 1950 charger is the unique solution for the continued use of everyday devices. It offers hundreds of recharges, saving actually from unnecessary expenses. The charger comes with 4 AA type rechargeable batteries for a complete offering."
+        "Toshiba USB charger supplied with four AA Ni-MH rechargeable batteries with a minimum capacity of 2000mAh."
       ],
-      "productCode": "THNC-VE 64MC",
-      "sfgtCode": "00152695",
+      "productCode": "TNHC-6GME4 CB",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
-            "CELLS/PACK",
-            "BOX",
-            "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PACK CONTENTS",
+            "BATTERY SIZE",
+            "MINIMUM BATTERY CAPACITY"
           ],
           "rows": [
             [
-              "1",
-              "6",
-              "6",
-              "432",
-              ""
+              "USB charger + 4 rechargeable batteries",
+              "AA",
+              "2000mAh"
             ]
           ]
         }
       ],
       "benefits": [],
       "technical": [],
-      "images": ["/images/catalogue/toshiba-charger-pack-front.webp"],
+      "images": [
+        "/images/catalogue/toshiba-charger-pack-front.webp"
+      ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=52",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=52"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=52",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/charger/",
+        "https://www.toshiba-lifestyle.com/sites/default/files/2023-11/batteries-english-2023-11.pdf"
       ],
       "downloads": [],
-      "notes": [],
+      "notes": [
+        "Please confirm the SFGT stock code, outer-pack quantities and availability with our team before ordering."
+      ],
       "category": "chargers",
       "family": "",
       "imageSources": [
@@ -5660,45 +5655,36 @@
     {
       "id": "battery-27",
       "slug": "cr1216-pw-bp-5",
-      "name": "CR1216 PW BP-5",
+      "name": "CR1216 lithium coin batteries (5-pack)",
       "division": "batteries",
       "sourceCategories": [
         "SPECIAL BATTERY",
         "Buttons"
       ],
       "description": [
-        "A broad product assortment proposal of alkaline button cells, focusing on the needs of compact and small devices of today. Remote controls, cameras, calculators, fitness and medical applications, toys."
+        "Toshiba CR1216 3V lithium coin batteries supplied as a five-cell strip pack. Check your device's required battery model before ordering."
       ],
-      "productCode": "CR2450 PW BP-5",
-      "sfgtCode": "00152699",
+      "productCode": "CR1216",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "5",
-              "20",
-              "200",
-              "12,000",
+              "",
+              "",
               ""
             ]
           ]
         }
       ],
-      "benefits": [
-        "BENEFITS:",
-        "Best suited for low drain use",
-        "Stable operating voltage",
-        "Long term reliability",
-        "SUITABLE FOR:",
-        "Toy, remote, calculator, watch, camera, glucose monitor, pedometer, other small devices"
-      ],
+      "benefits": [],
       "technical": [],
       "images": [
         "/images/catalogue/88d17b4741-220620201205581a.jpg",
@@ -5706,10 +5692,13 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=27",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=27"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=27",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/coin/"
       ],
       "downloads": [],
-      "notes": [],
+      "notes": [
+        "Please confirm the pack edition, SFGT stock code and outer-pack quantities with our team before ordering."
+      ],
       "category": "button-batteries",
       "family": "",
       "imageSources": [
@@ -5725,45 +5714,36 @@
     {
       "id": "battery-28",
       "slug": "cr1220-pw-bp-5n",
-      "name": "CR1220 PW BP-5N",
+      "name": "CR1220 lithium coin batteries (5-pack)",
       "division": "batteries",
       "sourceCategories": [
         "SPECIAL BATTERY",
         "Buttons"
       ],
       "description": [
-        "A broad product assortment proposal of alkaline button cells, focusing on the needs of compact and small devices of today. Remote controls, cameras, calculators, fitness and medical applications, toys."
+        "Toshiba CR1220 3V lithium coin batteries supplied as a five-cell strip pack. Check your device's required battery model before ordering."
       ],
-      "productCode": "CR2450 PW BP-5",
-      "sfgtCode": "00152680",
+      "productCode": "CR1220",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "5",
-              "20",
-              "200",
-              "12,000",
+              "",
+              "",
               ""
             ]
           ]
         }
       ],
-      "benefits": [
-        "BENEFITS:",
-        "Best suited for low drain use",
-        "Stable operating voltage",
-        "Long term reliability",
-        "SUITABLE FOR:",
-        "Toy, remote, calculator, watch, camera, glucose monitor, pedometer, other small devices"
-      ],
+      "benefits": [],
       "technical": [],
       "images": [
         "/images/catalogue/d30f4a75a3-220620201209242a.jpg",
@@ -5771,10 +5751,13 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=28",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=28"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=28",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/coin/"
       ],
       "downloads": [],
-      "notes": [],
+      "notes": [
+        "Please confirm the pack edition, SFGT stock code and outer-pack quantities with our team before ordering."
+      ],
       "category": "button-batteries",
       "family": "",
       "imageSources": [
@@ -5790,45 +5773,36 @@
     {
       "id": "battery-29",
       "slug": "cr1616-pw-bp-5",
-      "name": "CR1616 PW BP-5",
+      "name": "CR1616 lithium coin batteries (5-pack)",
       "division": "batteries",
       "sourceCategories": [
         "SPECIAL BATTERY",
         "Buttons"
       ],
       "description": [
-        "A broad product assortment proposal of alkaline button cells, focusing on the needs of compact and small devices of today. Remote controls, cameras, calculators, fitness and medical applications, toys."
+        "Toshiba CR1616 3V lithium coin batteries supplied as a five-cell strip pack. Check your device's required battery model before ordering."
       ],
-      "productCode": "CR2450 PW BP-5",
-      "sfgtCode": "00152700",
+      "productCode": "CR1616",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "5",
-              "20",
-              "200",
-              "12,000",
+              "",
+              "",
               ""
             ]
           ]
         }
       ],
-      "benefits": [
-        "BENEFITS:",
-        "Best suited for low drain use",
-        "Stable operating voltage",
-        "Long term reliability",
-        "SUITABLE FOR:",
-        "Toy, remote, calculator, watch, camera, glucose monitor, pedometer, other small devices"
-      ],
+      "benefits": [],
       "technical": [],
       "images": [
         "/images/catalogue/22e8144edf-220620201213013a.jpg",
@@ -5836,10 +5810,13 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=29",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=29"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=29",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/coin/"
       ],
       "downloads": [],
-      "notes": [],
+      "notes": [
+        "Please confirm the pack edition, SFGT stock code and outer-pack quantities with our team before ordering."
+      ],
       "category": "button-batteries",
       "family": "",
       "imageSources": [
@@ -5920,45 +5897,36 @@
     {
       "id": "battery-31",
       "slug": "cr1620-pw-bp-5n",
-      "name": "CR1620 PW BP-5N",
+      "name": "CR1620 lithium coin batteries (5-pack)",
       "division": "batteries",
       "sourceCategories": [
         "SPECIAL BATTERY",
         "Buttons"
       ],
       "description": [
-        "A broad product assortment proposal of alkaline button cells, focusing on the needs of compact and small devices of today. Remote controls, cameras, calculators, fitness and medical applications, toys."
+        "Toshiba CR1620 3V lithium coin batteries supplied as a five-cell strip pack. Check your device's required battery model before ordering."
       ],
-      "productCode": "CR2450 PW BP-5",
-      "sfgtCode": "00152681",
+      "productCode": "CR1620",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "5",
-              "20",
-              "200",
-              "12,000",
+              "",
+              "",
               ""
             ]
           ]
         }
       ],
-      "benefits": [
-        "BENEFITS:",
-        "Best suited for low drain use",
-        "Stable operating voltage",
-        "Long term reliability",
-        "SUITABLE FOR:",
-        "Toy, remote, calculator, watch, camera, glucose monitor, pedometer, other small devices"
-      ],
+      "benefits": [],
       "technical": [],
       "images": [
         "/images/catalogue/c50f6c338a-220620201221345a.jpg",
@@ -5966,10 +5934,13 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=31",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=31"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=31",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/coin/"
       ],
       "downloads": [],
-      "notes": [],
+      "notes": [
+        "Please confirm the pack edition, SFGT stock code and outer-pack quantities with our team before ordering."
+      ],
       "category": "button-batteries",
       "family": "",
       "imageSources": [
@@ -11733,7 +11704,7 @@
     {
       "id": "battery-115",
       "slug": "high-power-aaa-bp-10-x10-blister-pack",
-      "name": "HIGH POWER AAA BP-10 X10 (BLISTER PACK)",
+      "name": "HIGH POWER AAA BP-1X10 (STRIP BLISTER PACK)",
       "division": "batteries",
       "sourceCategories": [
         "ALKAINE BATTERY",
@@ -11742,23 +11713,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCP BP-10 X10",
-      "sfgtCode": "00152670",
+      "productCode": "LR03GCP BP-1X10CN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "10",
-              "10",
-              "80",
-              "2400",
+              "",
+              "",
               ""
             ]
           ]
@@ -11777,21 +11746,23 @@
       ],
       "technical": [],
       "images": [
-        "/images/catalogue/d8f8dca68a-01102020042027LR6GCP-BP1X10CN.png"
+        "/images/catalogue/8fad1135cb-01102020041558LR03GCP-BP1X10CN.png"
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=115",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=115"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=115",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
       "imageSources": [
         "https://www.toshibabts.com/galimg/01102020042027LR6GCP BP1X10CN.png",
-        "https://www.toshibabts.com/batteryimage/"
+        "https://www.toshibabts.com/batteryimage/",
+        "https://www.toshibabts.com/galimg/01102020041558LR03GCP BP1X10CN.png"
       ],
       "categoryPath": [
         "batteries",
@@ -11811,23 +11782,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCNN MP 12 SS",
-      "sfgtCode": "00152621",
+      "productCode": "LR6GCP MP-40CN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
-              "12",
-              "16",
-              "64",
-              "2820",
+              "40",
+              "",
+              "",
               ""
             ]
           ]
@@ -11850,12 +11819,12 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=116",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=116"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=116",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering.",
-        "The source title says MP-40, while its product code says MP-12 and its table lists 12 cells per pack. Please confirm the pack size."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
@@ -11881,23 +11850,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCP BP-2",
-      "sfgtCode": "00152649",
+      "productCode": "LR03GCP BP-2CN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "2",
-              "12",
-              "144",
-              "6912",
+              "",
+              "",
               ""
             ]
           ]
@@ -11920,11 +11887,12 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=117",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=117"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=117",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
@@ -11950,23 +11918,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCP BP-4",
-      "sfgtCode": "00152650",
+      "productCode": "LR03GCP BP-4CN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "4",
-              "12",
-              "48",
-              "6144",
+              "",
+              "",
               ""
             ]
           ]
@@ -11989,11 +11955,12 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=118",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=118"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=118",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
@@ -12019,23 +11986,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCP BP6 2F",
-      "sfgtCode": "00152658",
+      "productCode": "LR03GCP BP6 2FCN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "6",
-              "12",
-              "96",
-              "3072",
+              "",
+              "",
               ""
             ]
           ]
@@ -12058,11 +12023,12 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=119",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=119"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=119",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
@@ -12088,41 +12054,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCNN MP-12 SS",
-      "sfgtCode": "00152621",
+      "productCode": "LR03GCP MP-12CN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "12",
-              "16",
-              "64",
-              "2880",
-              ""
-            ]
-          ]
-        },
-        {
-          "headers": [
-            "CELLS/PACK",
-            "BOX",
-            "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
-          ],
-          "rows": [
-            [
-              "12",
-              "16",
-              "64",
-              "2820",
+              "",
+              "",
               ""
             ]
           ]
@@ -12141,19 +12087,18 @@
       ],
       "technical": [],
       "images": [
-        "/images/catalogue/9ac8e298fa-01102020050120LR03GCP-BP8MS4FCN.jpg",
         "/images/catalogue/ea36f0156c-01102020050859LR03GCP-MP-12CN.jpg"
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=120",
         "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=120",
         "https://www.toshibabts.com/ProductDetails.aspx?id=123",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=123"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=123",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The two source listings give pallet quantities of 2,880 and 2,820. Both packaging tables are retained below; please confirm the applicable quantity.",
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "sourceAliases": [
         "HIGH POWER AAA MP-12 SHRINK PACK",
@@ -12184,23 +12129,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCP BP10MS4F",
-      "sfgtCode": "00152660",
+      "productCode": "LR03GCP BP10MS4FCN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "10",
-              "12",
-              "48",
-              "3600",
+              "",
+              "",
               ""
             ]
           ]
@@ -12223,11 +12166,12 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=121",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=121"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=121",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
@@ -12253,23 +12197,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCP BP12MS4F",
-      "sfgtCode": "00152661",
+      "productCode": "LR03GCP BP12MS4FCN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "12",
-              "6",
-              "24",
-              "1920",
+              "",
+              "",
               ""
             ]
           ]
@@ -12292,11 +12234,12 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=122",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=122"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=122",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
@@ -12322,23 +12265,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCNN MP-16 SS",
-      "sfgtCode": "00152622",
+      "productCode": "LR03GCP MP-16CN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "16",
-              "6",
-              "24",
-              "2160",
+              "",
+              "",
               ""
             ]
           ]
@@ -12361,11 +12302,12 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=124",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=124"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=124",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
@@ -12391,23 +12333,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCNN MP-20 SS",
-      "sfgtCode": "00152623",
+      "productCode": "LR03GCP MP-20CN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "20",
-              "6",
-              "24",
-              "1800",
+              "",
+              "",
               ""
             ]
           ]
@@ -12430,11 +12370,12 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=125",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=125"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=125",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
@@ -12460,23 +12401,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCNN MP 12 SS",
-      "sfgtCode": "0152621",
+      "productCode": "LR03GCP MP-40CN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
-              "12",
-              "16",
-              "64",
-              "2820",
+              "40",
+              "",
+              "",
               ""
             ]
           ]
@@ -12499,10 +12438,13 @@
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=126",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=126"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=126",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
-      "notes": [],
+      "notes": [
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
+      ],
       "category": "high-power",
       "family": "",
       "imageSources": [
@@ -12799,23 +12741,21 @@
       "description": [
         "Toshiba alkaline High Power batteries are among the market’s top choice, designed for high performance and longer life. They have unique features, such as a higher capacity / weight ratio and less toxic ingredients. Toshiba batteries are compatible with all devices and perform very well in high demanding digital devices. All Toshiba batteries are fully charged and ready to use. They contain no mercury, cadmium and lead, providing a trustful source of energy."
       ],
-      "productCode": "LR6GCNN MP-20 SS",
-      "sfgtCode": "00152623",
+      "productCode": "LR6GCP MP-20CN",
+      "sfgtCode": "",
       "tables": [
         {
           "headers": [
             "CELLS/PACK",
             "BOX",
             "CARTON",
-            "PALETTE",
-            "MEASUREMENT"
+            "PALLET"
           ],
           "rows": [
             [
               "20",
-              "6",
-              "24",
-              "1,800",
+              "",
+              "",
               ""
             ]
           ]
@@ -12834,24 +12774,26 @@
       ],
       "technical": [],
       "images": [
-        "/images/catalogue/7c4012212a-01102020044718LR03GCP-MP-20CN.jpg",
+        "/images/catalogue/toshiba-high-power-aa-20-pack.jpg",
         "/images/catalogue/fcdc018fc2-0708202012125613b.jpg",
         "/images/catalogue/ce36b387b8-070820201212198c.jpg"
       ],
       "sources": [
         "https://www.toshibabts.com/ProductDetails.aspx?id=65",
-        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=65"
+        "https://toshiba.sfgt-tbts.com/ProductDetails.aspx?id=65",
+        "https://www.toshiba-lifestyle.com/jp/batteries-en/alkaline_high/"
       ],
       "downloads": [],
       "notes": [
-        "The source reuses this SFGT code for other pack sizes or battery types. Please confirm the model, size and pack with our team before ordering."
+        "Please confirm the SFGT stock code, box, carton and pallet quantities with our team before ordering."
       ],
       "category": "high-power",
       "family": "",
       "imageSources": [
         "https://www.toshibabts.com/galimg/01102020044718LR03GCP MP-20CN.jpg",
         "https://www.toshibabts.com/galimg/0708202012125613b.jpg",
-        "https://www.toshibabts.com/batteryimage/070820201212198c.jpg"
+        "https://www.toshibabts.com/batteryimage/070820201212198c.jpg",
+        "https://www.toshiba-lifestyle.com/sites/default/files/2021-06/alkaline_high_img_28.jpg"
       ],
       "categoryPath": [
         "batteries",

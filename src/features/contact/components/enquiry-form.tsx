@@ -3,7 +3,8 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useTranslations } from "next-intl";
+import { z } from "zod";
+import { useLocale, useTranslations } from "next-intl";
 import {
   ArrowRight,
   Check,
@@ -17,6 +18,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
   createEnquirySchema,
+  enquiryBuyerTypes,
+  enquiryContactPreferences,
   enquiryDivisions,
   type EnquiryDivision,
   type EnquiryValues,
@@ -24,19 +27,17 @@ import {
 import { mergeEnquiryProduct } from "../product-selection";
 import { mutationHandler } from "@/utils/mutationHandler";
 import { toast } from "@/utils/use-toast";
+import { Link } from "@/i18n/navigation";
 import "./contact-page.css";
 
-const optionalFields = [
-  "company",
-  "product",
-  "quantity",
-  "destination",
-] as const;
+const optionalFields = ["product", "quantity", "destination"] as const;
 const fieldLimits = {
   name: 100,
   email: 254,
   phone: 50,
   company: 150,
+  companyCountry: 100,
+  monthlyVolume: 250,
   product: 250,
   quantity: 250,
   destination: 150,
@@ -59,24 +60,27 @@ export function EnquiryForm({
 }) {
   const t = useTranslations("Website.contact");
   const ui = useTranslations("Website.inner");
+  const locale = useLocale();
   const id = useId();
-  const detailsFields = premiumHome
-    ? optionalFields.filter((field) => field !== "company")
-    : optionalFields;
   const schema = createEnquirySchema({
     required: t("required"),
     invalidEmail: t("invalidEmail"),
     messageMin: t("messageMin"),
     maxLength: t("maxLength"),
   });
-  const form = useForm<EnquiryValues>({
+  const form = useForm<EnquiryValues, unknown, z.output<typeof schema>>({
     resolver: zodResolver(schema),
     defaultValues: {
       name: "",
       email: "",
       phone: "",
-      division: "",
+      division: /distribution/i.test(product) ? "distribution" : "",
+      locale: locale === "ar" ? "ar" : "en",
       company: "",
+      companyCountry: "",
+      buyerType: "",
+      monthlyVolume: "",
+      contactPreference: "",
       product,
       quantity: "",
       destination: "",
@@ -89,9 +93,21 @@ export function EnquiryForm({
   const [copyStatus, setCopyStatus] = useState("");
   const [serverError, setServerError] = useState("");
   const [sent, setSent] = useState(false);
+  const [reference, setReference] = useState("");
+  const [acknowledgementSent, setAcknowledgementSent] = useState(false);
   const [selectionNotice, setSelectionNotice] = useState("");
   const panel = useRef<HTMLElement>(null);
   const selectedProduct = useWatch({ control: form.control, name: "product" });
+  const selectedDivision = useWatch({
+    control: form.control,
+    name: "division",
+  });
+  const selectedBuyerType = useWatch({
+    control: form.control,
+    name: "buyerType",
+  });
+  const distributionEnquiry =
+    selectedDivision === "distribution" || selectedBuyerType === "distributor";
   const successHeading = useRef<HTMLHeadingElement>(null);
   const submission = useRef<{ payload: string; requestId: string } | null>(
     null
@@ -140,6 +156,8 @@ export function EnquiryForm({
         form.reset();
         submission.current = null;
         setSent(false);
+        setReference("");
+        setAcknowledgementSent(false);
       }
       if (enquiryDivisions.some((value) => value === division)) {
         form.setValue("division", division, { shouldDirty: true });
@@ -194,6 +212,21 @@ export function EnquiryForm({
       ...(values.division
         ? [`${t("division")}: ${t(`divisions.${values.division}`)}`]
         : []),
+      ...(values.company ? [`${t("company")}: ${values.company}`] : []),
+      ...(values.companyCountry
+        ? [`${t("companyCountry")}: ${values.companyCountry}`]
+        : []),
+      ...(values.buyerType
+        ? [`${t("buyerType")}: ${t(`buyerTypes.${values.buyerType}`)}`]
+        : []),
+      ...(values.contactPreference
+        ? [
+            `${t("contactPreference")}: ${t(`contactPreferences.${values.contactPreference}`)}`,
+          ]
+        : []),
+      ...(distributionEnquiry && values.monthlyVolume
+        ? [`${t("monthlyVolume")}: ${values.monthlyVolume}`]
+        : []),
       ...optionalFields
         .filter((field) => values[field])
         .map((field) => `${t(field)}: ${values[field]}`),
@@ -207,7 +240,11 @@ export function EnquiryForm({
     );
   }
 
-  async function submit(values: EnquiryValues) {
+  async function submit(submittedValues: EnquiryValues) {
+    const values = {
+      ...submittedValues,
+      monthlyVolume: distributionEnquiry ? submittedValues.monthlyVolume : "",
+    };
     setServerError("");
     if (!deliveryEnabled) {
       prepare(values);
@@ -217,6 +254,7 @@ export function EnquiryForm({
     // Reuse the key when retrying an unchanged enquiry after a lost response.
     if (submission.current?.payload !== payload) {
       submission.current = { payload, requestId: crypto.randomUUID() };
+      setReference("");
     }
     const requestId = submission.current.requestId;
     const adaptedToast = {
@@ -227,7 +265,7 @@ export function EnquiryForm({
     await mutationHandler(
       async () => {
         const controller = new AbortController();
-        const timeout = window.setTimeout(() => controller.abort(), 25000);
+        const timeout = window.setTimeout(() => controller.abort(), 65000);
         try {
           const response = await fetch("/api/enquiry", {
             method: "POST",
@@ -235,15 +273,26 @@ export function EnquiryForm({
             body: JSON.stringify({ ...values, requestId }),
             signal: controller.signal,
           });
-          const result: { success?: boolean; error?: string } | null =
-            await response.json().catch(() => null);
+          const result: {
+            success?: boolean;
+            error?: string;
+            reference?: string;
+            acknowledgementSent?: boolean;
+          } | null = await response.json().catch(() => null);
+          if (result?.reference) setReference(result.reference);
           if (!response.ok || result?.success !== true) {
-            throw new Error(
-              result?.error === "RATE_LIMITED"
-                ? "RATE_LIMITED"
-                : "DELIVERY_FAILED"
-            );
+            throw new Error(result?.error ?? "DELIVERY_PENDING");
           }
+          setAcknowledgementSent(result.acknowledgementSent === true);
+        } catch (error) {
+          if (
+            error instanceof TypeError ||
+            (error instanceof Error && error.name === "AbortError")
+          ) {
+            setReference(`SFGT-${requestId.toUpperCase()}`);
+            throw new Error("DELIVERY_PENDING");
+          }
+          throw error;
         } finally {
           window.clearTimeout(timeout);
         }
@@ -254,10 +303,17 @@ export function EnquiryForm({
           setDraft("");
         },
         onError: (error) => {
-          const message =
-            error instanceof Error && error.message === "RATE_LIMITED"
-              ? t("rateLimited")
-              : t("sendFailed");
+          const code =
+            error instanceof Error ? error.message : "DELIVERY_FAILED";
+          if (code === "DELIVERY_PENDING" || code === "REQUEST_CONFLICT") {
+            setReference(`SFGT-${requestId.toUpperCase()}`);
+          }
+          const messages: Record<string, string> = {
+            RATE_LIMITED: t("rateLimited"),
+            DELIVERY_PENDING: t("deliveryPending"),
+            REQUEST_CONFLICT: t("requestConflict"),
+          };
+          const message = messages[code] ?? t("sendFailed");
           setServerError(message);
           adaptedToast.error(message);
         },
@@ -267,7 +323,14 @@ export function EnquiryForm({
   }
 
   function field(
-    name: "name" | "email" | "phone" | (typeof optionalFields)[number]
+    name:
+      | "name"
+      | "email"
+      | "phone"
+      | "company"
+      | "companyCountry"
+      | "monthlyVolume"
+      | (typeof optionalFields)[number]
   ) {
     const required = name === "name" || name === "email";
     const error = form.formState.errors[name];
@@ -277,12 +340,13 @@ export function EnquiryForm({
           htmlFor={`${id}-${name}`}
           className="mb-2 block text-sm font-medium"
         >
-          {t(name)}
+          {name === "phone" ? t("phoneInput") : t(name)}
           {required && " *"}
         </label>
         <Input
           id={`${id}-${name}`}
           type={name === "email" ? "email" : name === "phone" ? "tel" : "text"}
+          dir={name === "email" || name === "phone" ? "ltr" : "auto"}
           autoComplete={
             name === "name"
               ? "name"
@@ -290,9 +354,11 @@ export function EnquiryForm({
                 ? "email"
                 : name === "phone"
                   ? "tel"
-                  : name === "company"
-                    ? "organization"
-                    : "off"
+                  : name === "companyCountry"
+                    ? "country-name"
+                    : name === "company"
+                      ? "organization"
+                      : "off"
           }
           {...form.register(name)}
           required={required}
@@ -301,6 +367,47 @@ export function EnquiryForm({
           aria-describedby={error ? `${id}-error-${name}` : undefined}
           className="bg-background"
         />
+        {error && (
+          <p
+            id={`${id}-error-${name}`}
+            role="alert"
+            className="mt-2 text-xs text-destructive"
+          >
+            {error.message}
+          </p>
+        )}
+      </div>
+    );
+  }
+
+  function select(
+    name: "buyerType" | "contactPreference",
+    options: readonly string[]
+  ) {
+    const error = form.formState.errors[name];
+    return (
+      <div>
+        <label
+          htmlFor={`${id}-${name}`}
+          className="mb-2 block text-sm font-medium"
+        >
+          {t(name)}
+        </label>
+        <select
+          id={`${id}-${name}`}
+          {...form.register(name)}
+          aria-invalid={Boolean(error)}
+          aria-describedby={error ? `${id}-error-${name}` : undefined}
+        >
+          <option value="">{t(`${name}Placeholder`)}</option>
+          {options.map((option) => (
+            <option key={option} value={option}>
+              {t(
+                `${name === "buyerType" ? "buyerTypes" : "contactPreferences"}.${option}`
+              )}
+            </option>
+          ))}
+        </select>
         {error && (
           <p
             id={`${id}-error-${name}`}
@@ -327,6 +434,12 @@ export function EnquiryForm({
             {t("sendSuccessTitle")}
           </h2>
           <p>{t("sendSuccessBody", { email: form.getValues("email") })}</p>
+          {reference && (
+            <p className="enquiry-reference">
+              {t("enquiryReference")} <bdi dir="ltr">{reference}</bdi>
+            </p>
+          )}
+          {acknowledgementSent && <p>{t("acknowledgementSent")}</p>}
           <Button
             type="button"
             variant="outline"
@@ -335,6 +448,8 @@ export function EnquiryForm({
               setSent(false);
               setDetailsOpen(Boolean(product));
               setSelectionNotice("");
+              setReference("");
+              setAcknowledgementSent(false);
               submission.current = null;
             }}
           >
@@ -369,7 +484,7 @@ export function EnquiryForm({
             }}
             onSubmit={(event) => {
               void form.handleSubmit(submit, (errors) => {
-                const invalid = detailsFields.find((name) => errors[name]);
+                const invalid = optionalFields.find((name) => errors[name]);
                 if (invalid) {
                   setDetailsOpen(true);
                   requestAnimationFrame(() => form.setFocus(invalid));
@@ -383,24 +498,23 @@ export function EnquiryForm({
               className="enquiry-fields"
               aria-busy={busy}
             >
-              {(supplierHome || premiumHome) && (
-                <div>
-                  <label
-                    htmlFor={`${id}-division`}
-                    className="mb-2 block text-sm font-medium"
-                  >
-                    {t("division")}
-                  </label>
-                  <select id={`${id}-division`} {...form.register("division")}>
-                    <option value="">{t("divisionPlaceholder")}</option>
-                    {enquiryDivisions.map((division) => (
-                      <option key={division} value={division}>
-                        {t(`divisions.${division}`)}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              )}
+              <input type="hidden" {...form.register("locale")} />
+              <div>
+                <label
+                  htmlFor={`${id}-division`}
+                  className="mb-2 block text-sm font-medium"
+                >
+                  {t("division")}
+                </label>
+                <select id={`${id}-division`} {...form.register("division")}>
+                  <option value="">{t("divisionPlaceholder")}</option>
+                  {enquiryDivisions.map((division) => (
+                    <option key={division} value={division}>
+                      {t(`divisions.${division}`)}
+                    </option>
+                  ))}
+                </select>
+              </div>
               {selectedProduct && (
                 <div className="enquiry-product-context">
                   <div>
@@ -429,23 +543,19 @@ export function EnquiryForm({
               >
                 {selectionNotice}
               </p>
-              {premiumHome ? (
-                <>
-                  <div className="enquiry-field-grid">
-                    {field("name")}
-                    {field("company")}
-                  </div>
-                  <div className="enquiry-field-grid">
-                    {field("email")}
-                    {field("phone")}
-                  </div>
-                </>
-              ) : (
-                <div className="enquiry-field-grid">
-                  {field("name")}
-                  {field("email")}
-                </div>
-              )}
+              <div className="enquiry-field-grid">
+                {field("name")}
+                {field("company")}
+              </div>
+              <div className="enquiry-field-grid">
+                {field("email")}
+                {field("phone")}
+              </div>
+              <div className="enquiry-field-grid">
+                {field("companyCountry")}
+                {select("buyerType", enquiryBuyerTypes)}
+              </div>
+              {distributionEnquiry && field("monthlyVolume")}
               <div>
                 <label
                   htmlFor={`${id}-message`}
@@ -488,7 +598,8 @@ export function EnquiryForm({
                   <Plus aria-hidden="true" />
                 </summary>
                 <div className="enquiry-field-grid">
-                  {detailsFields.map(field)}
+                  {optionalFields.map(field)}
+                  {select("contactPreference", enquiryContactPreferences)}
                 </div>
               </details>
               <div className="enquiry-honeypot" aria-hidden="true">
@@ -501,11 +612,17 @@ export function EnquiryForm({
                 />
               </div>
               <p className="enquiry-privacy">
-                {deliveryEnabled ? t("sendPrivacy") : t("privacy")}
+                {deliveryEnabled ? t("sendPrivacy") : t("privacy")}{" "}
+                <Link href="/privacy">{t("privacyLink")}</Link>
               </p>
               {serverError && (
                 <p role="alert" className="enquiry-error">
                   {serverError}
+                  {reference && (
+                    <span className="enquiry-reference">
+                      {t("enquiryReference")} <bdi dir="ltr">{reference}</bdi>
+                    </span>
+                  )}
                 </p>
               )}
               <div className="enquiry-submit-actions">

@@ -70,8 +70,7 @@ export async function PremiumHome({
               alt={t("hero.imageAlt")}
               fill
               priority
-              unoptimized
-              sizes="100vw"
+              sizes="(max-width: 767px) 870px, (max-width: 1023px) 1024px, (max-width: 1859px) 1860px, 100vw"
             />
             <HeroBulb />
           </div>

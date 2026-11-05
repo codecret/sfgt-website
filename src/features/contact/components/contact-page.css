@@ -12,6 +12,22 @@
   display: none;
 }
 
+.contact-form-shortcut {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+#enquiry-form {
+  scroll-margin-top: 110px;
+}
+
 .contact-quick-actions {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -469,6 +485,16 @@
   font-size: 11px;
   line-height: 1.8;
   color: hsl(var(--muted-foreground));
+}
+.enquiry-privacy a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.enquiry-reference {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
 }
 .enquiry-direct-link {
   display: inline-block;

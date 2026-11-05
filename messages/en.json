@@ -510,7 +510,31 @@
       "removeProduct": "Remove product selection",
       "selectionAdded": "{product} added to your enquiry. Your other details have been kept.",
       "selectionRemoved": "Product selection removed.",
-      "divisionSelected": "Enquiry division updated. Your other details have been kept."
+      "divisionSelected": "Enquiry division updated. Your other details have been kept.",
+      "phoneInput": "Phone or WhatsApp (optional)",
+      "companyCountry": "Company country (optional)",
+      "buyerType": "Business type (optional)",
+      "buyerTypePlaceholder": "Select your business type",
+      "buyerTypes": {
+        "retailer": "Retailer",
+        "wholesaler": "Wholesaler",
+        "distributor": "Distributor",
+        "other": "Other business"
+      },
+      "monthlyVolume": "Expected monthly volume (optional)",
+      "contactPreference": "Preferred contact method (optional)",
+      "contactPreferencePlaceholder": "Select a contact method",
+      "contactPreferences": {
+        "email": "Email",
+        "phone": "Phone call",
+        "whatsapp": "WhatsApp"
+      },
+      "privacyLink": "Privacy notice",
+      "jumpToForm": "Go to the enquiry form",
+      "enquiryReference": "Enquiry reference",
+      "acknowledgementSent": "A confirmation email has been sent to the email address you provided.",
+      "deliveryPending": "We could not confirm delivery. Contact our team with the reference below before resending.",
+      "requestConflict": "This enquiry reference already belongs to a different request. Contact our team with the reference below."
     },
     "footer": {
       "description": "Toshiba batteries and lighting, commodities and commercial supplies. Based in Dubai, serving business customers and distribution partners.",
@@ -938,6 +962,38 @@
           }
         }
       }
+    },
+    "privacy": {
+      "title": "Privacy notice",
+      "intro": "How Sulemane Faruk General Trading LLC handles information shared through this website and its enquiry forms.",
+      "updated": "Updated 5 November 2026",
+      "sections": {
+        "collect": {
+          "title": "Information you share",
+          "body": "Our enquiry form collects your name, email address and message. You can also provide your phone or WhatsApp number, company name and country, business type, preferred contact method, product requirements, quantities, delivery destination and expected monthly volume."
+        },
+        "use": {
+          "title": "How we use your information",
+          "body": "We use these details to answer your questions, prepare quotations, assess distribution enquiries and follow up on your requirements. Enquiries are sent by email, and our team keeps the related email correspondence to manage the conversation."
+        },
+        "providers": {
+          "title": "Who handles enquiry information",
+          "body": "Enquiries are emailed to the SFGT sales team at {email}. The website is hosted on Vercel, and our company email is hosted with MXroute. These providers process information to operate the website and deliver email. Information may be processed in the countries where those providers operate."
+        },
+        "technical": {
+          "title": "Website operation and security",
+          "body": "The website and its hosting provider process technical information such as network addresses and request logs to operate the service, investigate failures and prevent spam. A language preference may be stored in your browser when you choose English or Arabic. Links to WhatsApp, maps and other websites are subject to those services’ own privacy notices."
+        },
+        "retention": {
+          "title": "Keeping enquiry information",
+          "body": "We retain enquiry emails and related correspondence for as long as needed to handle the request, follow up and meet applicable business obligations. Retention depends on the nature of the enquiry and any resulting business relationship."
+        },
+        "contact": {
+          "title": "Questions about your information",
+          "body": "Contact {email} to ask about the personal information you have shared, request a correction or ask for deletion. Our team will review the request in light of the correspondence held and applicable obligations."
+        }
+      },
+      "contactLink": "Contact SFGT"
     }
   }
 }

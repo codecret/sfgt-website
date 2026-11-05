@@ -98,6 +98,7 @@ export function Footer() {
         <div className="industrial-footer-bottom">
           <p>{t("footer.copyright", { year: new Date().getFullYear() })}</p>
           <div className="industrial-footer-preferences">
+            <Link href="/privacy">{t("contact.privacyLink")}</Link>
             <Link href="/support">
               {t("footer.support")}
               <ArrowUpRight aria-hidden="true" />

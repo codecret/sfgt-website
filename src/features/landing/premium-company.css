@@ -451,6 +451,12 @@
 .premium-home .premium-footer-bottom p {
   margin: 0;
 }
+.premium-home .premium-footer-preferences {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+}
 .premium-home .premium-footer-bottom a {
   display: inline-flex;
   align-items: center;

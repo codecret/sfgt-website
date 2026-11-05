@@ -8,6 +8,10 @@ const inventory = read("docs/source-audit/source-inventory.json");
 const specifications = read("docs/source-audit/original-specifications.json");
 const mapping = read("docs/source-audit/route-map.json");
 const assets = read("docs/source-audit/asset-manifest.json");
+const corrections = read("docs/source-audit/catalogue-corrections-2026-11-05.json");
+const correctionByProduct = new Map(
+  corrections.map((correction) => [correction.productId, correction])
+);
 const paths = new Set([
   "/",
   "/about",
@@ -54,14 +58,31 @@ for (const source of inventory) {
 }
 const normalizeCell = (value) =>
   value.replaceAll(",", "").replaceAll(/\s/g, "");
+for (const correction of corrections) {
+  const product = data.products.find(
+    (product) => product.id === correction.productId
+  );
+  assert.ok(product, `Missing reviewed product: ${correction.productId}`);
+  assert.ok(correction.evidence.length, "Corrections require source evidence");
+  for (const [field, value] of Object.entries(correction.corrected)) {
+    assert.deepEqual(
+      product[field],
+      value,
+      `Reviewed ${field} changed without updating the audit: ${product.id}`
+    );
+  }
+}
 for (const original of specifications) {
   const product = data.products.find((product) =>
     product.sources.includes(original.url)
   );
   assert.ok(product, `Missing original product: ${original.url}`);
+  // Reviewed corrections retain the superseded table in the audit record.
+  const preservedTables =
+    correctionByProduct.get(product.id)?.original.tables ?? product.tables;
   for (const table of original.tables) {
     assert.ok(
-      product.tables.some(
+      preservedTables.some(
         (candidate) =>
           JSON.stringify(candidate.headers) === JSON.stringify(table.headers) &&
           JSON.stringify(
@@ -72,6 +93,14 @@ for (const original of specifications) {
     );
   }
 }
+const stockCodes = data.products
+  .map((product) => product.sfgtCode)
+  .filter(Boolean);
+assert.equal(
+  new Set(stockCodes).size,
+  stockCodes.length,
+  "SFGT stock codes must not be assigned to different product records"
+);
 for (const product of data.products) {
   assert.ok(
     product.name && product.images.length && product.sources.length,
@@ -141,5 +170,5 @@ assert.deepEqual(
   "Locale keys must match"
 );
 process.stdout.write(
-  `Verified ${data.products.length} products, ${specifications.length} source specification records, ${data.categories.length} categories, ${inventory.length} source mappings, image provenance, four unchanged PDFs and translation parity.\n`
+  `Verified ${data.products.length} products, ${specifications.length} preserved source specification records, ${corrections.length} reviewed corrections, ${data.categories.length} categories, ${inventory.length} source mappings, image provenance, four unchanged PDFs and translation parity.\n`
 );

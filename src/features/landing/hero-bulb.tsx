@@ -50,6 +50,8 @@ export function HeroBulb() {
   const ready = useRef(false);
   const desired = useRef(false);
   const [lit, setLit] = useState(false);
+  const [loadLighting, setLoadLighting] = useState(false);
+  const [lightingSource, setLightingSource] = useState("");
   const [failed, setFailed] = useState(false);
   const url = (name: string) => `url(#${id}-${name})`;
 
@@ -58,13 +60,18 @@ export function HeroBulb() {
     const original = art?.querySelector("img");
     const illuminated = onImage.current;
     const target = layer.current?.querySelector("button");
-    if (!original || !illuminated || !target) return;
+    if (!original || !target) return;
     const controller = new AbortController();
     const { signal } = controller;
     let inView = false;
+    let originalReady = false;
     const ignite = () => {
-      if (started.current || !ready.current || !inView || document.hidden)
+      if (!inView || document.hidden) return;
+      if (originalReady && !illuminated) {
+        setLoadLighting(true);
         return;
+      }
+      if (started.current || !ready.current) return;
       started.current = true;
       desired.current = true;
       setLit(true);
@@ -87,10 +94,16 @@ export function HeroBulb() {
     // fade toward an empty image, or replace the user's pending toggle intent.
     Promise.all([
       decodeImage(original, signal),
-      decodeImage(illuminated, signal),
+      ...(illuminated ? [decodeImage(illuminated, signal)] : []),
     ])
       .then(() => {
         if (signal.aborted) return;
+        originalReady = true;
+        if (!illuminated) {
+          ignite();
+          return;
+        }
+        setLightingSource(illuminated.currentSrc);
         ready.current = true;
         if (started.current) setLit(desired.current);
         else ignite();
@@ -109,7 +122,7 @@ export function HeroBulb() {
       controller.abort();
       observer?.disconnect();
     };
-  }, []);
+  }, [loadLighting]);
 
   // The base photograph remains visible if either asset fails; do not leave an
   // invisible, nonfunctional button in the keyboard order.
@@ -118,18 +131,24 @@ export function HeroBulb() {
   return (
     <div ref={layer} className="premium-bulb-lighting" data-lit={lit}>
       <div className="premium-bulb-scene">
-        <Image
-          ref={onImage}
-          className="premium-bulb-on-image"
-          src={illuminatedSource}
-          width={2172}
-          height={724}
-          alt=""
-          aria-hidden="true"
-          loading="eager"
-          unoptimized
-          draggable={false}
-        />
+        {loadLighting && (
+          <Image
+            ref={onImage}
+            className="premium-bulb-on-image"
+            src={illuminatedSource}
+            width={2172}
+            height={724}
+            sizes="(max-width: 767px) 870px, (max-width: 1023px) 1024px, (max-width: 1859px) 1860px, 100vw"
+            alt=""
+            aria-hidden="true"
+            loading="eager"
+            fetchPriority="low"
+            onLoad={(event) =>
+              setLightingSource(event.currentTarget.currentSrc)
+            }
+            draggable={false}
+          />
+        )}
         <svg
           className="premium-bulb-effects"
           viewBox="0 0 2172 724"
@@ -173,7 +192,7 @@ export function HeroBulb() {
           <g clipPath={url("diffuser")} mask={url("diffuser-feather")}>
             <image
               className="premium-bulb-ignition-image"
-              href={illuminatedSource}
+              href={lightingSource || undefined}
               x="0"
               y="0"
               width="2172"

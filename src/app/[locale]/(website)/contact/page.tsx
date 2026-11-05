@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import {
   ArrowUpRight,
+  ArrowDown,
   Clock,
   MapPin,
   Phone,
@@ -46,6 +47,10 @@ export default async function ContactPage({ searchParams }: Props) {
         title={t("title")}
         description={t("intro")}
       />
+      <a href="#enquiry-form" className="contact-form-shortcut">
+        {t("jumpToForm")}
+        <ArrowDown size={16} aria-hidden="true" />
+      </a>
       <nav className="contact-quick-actions" aria-label={t("general")}>
         <a href={`mailto:${company.email}`}>
           <Mail aria-hidden="true" />
@@ -86,7 +91,7 @@ export default async function ContactPage({ searchParams }: Props) {
           <ArrowUpRight aria-hidden="true" />
         </a>
       </nav>
-      <div className="contact-layout">
+      <div id="enquiry-form" className="contact-layout">
         <EnquiryForm
           key={`${product}-${code}`}
           product={`${product}${code ? ` (${code})` : ""}`}

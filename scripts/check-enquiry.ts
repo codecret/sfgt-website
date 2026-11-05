@@ -8,7 +8,15 @@ import {
   createEnquiryLimiter,
 } from "../src/features/contact/server/enquiry-handler";
 import { sendEnquiryMessage } from "../src/features/contact/server/enquiry-message";
-import { sendSmtpEnquiry } from "../src/features/contact/server/enquiry-smtp";
+import {
+  sendSmtpEnquiry,
+  sendSmtpEnquiryStatus,
+} from "../src/features/contact/server/enquiry-smtp";
+import {
+  createEnquirySubmission,
+  enquiryReference,
+} from "../src/features/contact/server/enquiry-submission";
+import { enquiryAcknowledgement } from "../src/features/contact/server/enquiry-acknowledgement";
 import { mergeEnquiryProduct } from "../src/features/contact/product-selection";
 import { splitSupplierHomeContent } from "../src/features/landing/supplier-home-content";
 import markup from "../src/features/landing/supplier-home-markup.json";
@@ -46,9 +54,17 @@ function handler(
   });
 }
 
-async function expectError(response: Response, status: number, error: string) {
+async function expectError(
+  response: Response,
+  status: number,
+  error: string,
+  reference?: string
+) {
   assert.equal(response.status, status);
-  assert.deepEqual(await response.json(), { error });
+  assert.deepEqual(await response.json(), {
+    error,
+    ...(reference ? { reference } : {}),
+  });
   assert.equal(response.headers.get("cache-control"), "no-store");
 }
 
@@ -77,7 +93,11 @@ test("valid enquiry reaches delivery with normalized optional fields", async () 
     })
   );
   assert.equal(response.status, 200);
-  assert.deepEqual(await response.json(), { success: true });
+  assert.deepEqual(await response.json(), {
+    success: true,
+    reference: enquiryReference(requestId),
+    acknowledgementSent: false,
+  });
   assert.equal(called, true);
 });
 
@@ -405,4 +425,291 @@ test("form schema keeps optional fields as strings and uses translated errors", 
   const result = schema.safeParse({ ...values, name: "" });
   assert.equal(result.success, false);
   if (!result.success) assert.equal(result.error.issues[0].message, "required");
+});
+
+test("concurrent submissions and later retries send sales and acknowledgement once", async () => {
+  let release!: () => void;
+  let started!: () => void;
+  const waiting = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  const sending = new Promise<void>((resolve) => {
+    started = resolve;
+  });
+  let sales = 0;
+  let acknowledgements = 0;
+  const submit = createEnquirySubmission({
+    deliver: async () => {
+      sales += 1;
+      started();
+      await waiting;
+      return "sent";
+    },
+    acknowledge: async () => {
+      acknowledgements += 1;
+      return "sent";
+    },
+  });
+  const first = submit(values, requestId);
+  await sending;
+  const concurrent = await submit(values, requestId);
+  assert.equal(concurrent.status, "pending");
+  release();
+  const accepted = await first;
+  const retry = await submit(values, requestId);
+  assert.equal(accepted.status, "sent");
+  assert.equal(accepted.acknowledgementSent, true);
+  assert.deepEqual(retry, accepted);
+  assert.equal(sales, 1);
+  assert.equal(acknowledgements, 1);
+});
+
+test("an existing request UUID cannot be reused for changed enquiry contents", async () => {
+  let sales = 0;
+  const submit = createEnquirySubmission({
+    deliver: async () => {
+      sales += 1;
+      return "sent";
+    },
+    acknowledge: async () => "sent",
+  });
+  await submit(values, requestId);
+  const changed = await submit(
+    { ...values, email: "different@example.com" },
+    requestId
+  );
+  assert.equal(changed.status, "conflict");
+  assert.equal(sales, 1);
+});
+
+test("unknown mail acceptance prevents a resend within the receipt window", async () => {
+  let time = 0;
+  let sales = 0;
+  const submit = createEnquirySubmission({
+    now: () => time,
+    deliver: async () => {
+      sales += 1;
+      throw new Error("connection lost after DATA");
+    },
+    acknowledge: async () =>
+      assert.fail("unconfirmed delivery cannot be acknowledged"),
+  });
+  assert.equal((await submit(values, requestId)).status, "pending");
+  time = 30 * 60 * 1000;
+  assert.equal((await submit(values, requestId)).status, "pending");
+  assert.equal(sales, 1);
+});
+
+test("SMTP authentication rejection can be retried using the same email reference", async () => {
+  let sales = 0;
+  const submit = createEnquirySubmission({
+    deliver: async () => {
+      return sendSmtpEnquiryStatus({
+        values,
+        requestId,
+        from: "website@example.com",
+        to: "sales@example.com",
+        send: async () => {
+          sales += 1;
+          if (sales === 1) {
+            throw Object.assign(new Error("Authentication rejected"), {
+              code: "EAUTH",
+            });
+          }
+          return {
+            messageId: "accepted-after-auth-fix",
+            accepted: ["sales@example.com"],
+            rejected: [],
+          };
+        },
+      });
+    },
+    acknowledge: async () => "sent",
+  });
+  const failed = await submit(values, requestId);
+  const accepted = await submit(values, requestId);
+  assert.equal(failed.status, "failed");
+  assert.equal(accepted.status, "sent");
+  assert.equal(failed.reference, accepted.reference);
+  assert.equal(sales, 2);
+});
+
+test("acknowledgement failure preserves accepted sales delivery and avoids duplicate sends", async () => {
+  for (const acknowledgementStatus of ["failed", "unknown"] as const) {
+    let sales = 0;
+    let acknowledgements = 0;
+    const submit = createEnquirySubmission({
+      deliver: async () => {
+        sales += 1;
+        return "sent";
+      },
+      acknowledge: async () => {
+        acknowledgements += 1;
+        return acknowledgementStatus;
+      },
+    });
+    const first = await submit(values, requestId);
+    const repeated = await submit(values, requestId);
+    assert.equal(first.status, "sent");
+    assert.equal(first.acknowledgementSent, false);
+    assert.deepEqual(repeated, first);
+    assert.equal(sales, 1);
+    assert.equal(acknowledgements, 1);
+  }
+});
+
+test("a retry during acknowledgement does not send another acknowledgement", async () => {
+  let release!: () => void;
+  let started!: () => void;
+  const waiting = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  const sending = new Promise<void>((resolve) => {
+    started = resolve;
+  });
+  let acknowledgements = 0;
+  const submit = createEnquirySubmission({
+    deliver: async () => "sent",
+    acknowledge: async () => {
+      acknowledgements += 1;
+      started();
+      await waiting;
+      return "sent";
+    },
+  });
+  const first = submit(values, requestId);
+  await sending;
+  const concurrent = await submit(values, requestId);
+  assert.equal(concurrent.status, "sent");
+  assert.equal(concurrent.acknowledgementSent, false);
+  release();
+  assert.equal((await first).acknowledgementSent, true);
+  assert.equal(acknowledgements, 1);
+});
+
+test("receipt cache stays bounded and frees expired settled receipts", async () => {
+  let time = 0;
+  let sales = 0;
+  const submit = createEnquirySubmission({
+    now: () => time,
+    deliver: async () => {
+      sales += 1;
+      return "failed";
+    },
+    acknowledge: async () =>
+      assert.fail("rejected sales cannot be acknowledged"),
+  });
+  for (let index = 0; index < 1000; index += 1) {
+    assert.equal((await submit(values, `request-${index}`)).status, "failed");
+  }
+  assert.equal(
+    (await submit(values, "request-capacity")).status,
+    "rate_limited"
+  );
+  assert.equal(sales, 1000);
+  time = 60 * 60 * 1000;
+  assert.equal((await submit(values, "request-capacity")).status, "failed");
+  assert.equal(sales, 1001);
+});
+
+test("unknown receipts expire so a provider incident cannot exhaust cache permanently", async () => {
+  let time = 0;
+  let providerRecovered = false;
+  let sales = 0;
+  const submit = createEnquirySubmission({
+    now: () => time,
+    deliver: async () => {
+      sales += 1;
+      return providerRecovered ? "sent" : "unknown";
+    },
+    acknowledge: async () => "sent",
+  });
+  for (let index = 0; index < 1000; index += 1) {
+    assert.equal((await submit(values, `unknown-${index}`)).status, "pending");
+  }
+  assert.equal((await submit(values, "after-recovery")).status, "rate_limited");
+  providerRecovered = true;
+  time = 60 * 60 * 1000;
+  assert.equal((await submit(values, "after-recovery")).status, "sent");
+  assert.equal(sales, 1001);
+});
+
+test("receipt cleanup never expires an in-flight send", async () => {
+  let release!: () => void;
+  let time = 0;
+  let sales = 0;
+  const waiting = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  const submit = createEnquirySubmission({
+    now: () => time,
+    deliver: async () => {
+      sales += 1;
+      await waiting;
+      return "sent";
+    },
+    acknowledge: async () => "sent",
+  });
+  const first = submit(values, requestId);
+  time = 24 * 60 * 60 * 1000;
+  assert.equal((await submit(values, requestId)).status, "pending");
+  assert.equal(sales, 1);
+  release();
+  assert.equal((await first).status, "sent");
+});
+
+test("email delivery responses expose a reference and accurate acknowledgement state", async () => {
+  const receipt = {
+    status: "sent" as const,
+    reference: enquiryReference(requestId),
+    acknowledgementSent: true,
+  };
+  const endpoint = handler({
+    deliver: async () => assert.fail("submission owns delivery"),
+    submit: async (submitted, id) => {
+      assert.equal(submitted.name, values.name);
+      assert.equal(id, requestId);
+      return receipt;
+    },
+  });
+  const response = await endpoint(request());
+  assert.equal(response.status, 200);
+  assert.deepEqual(await response.json(), {
+    success: true,
+    reference: receipt.reference,
+    acknowledgementSent: true,
+  });
+  await expectError(
+    await handler({ submit: async () => ({ ...receipt, status: "pending" }) })(
+      request()
+    ),
+    409,
+    "DELIVERY_PENDING",
+    receipt.reference
+  );
+  await expectError(
+    await handler({
+      submit: async () => {
+        throw new Error("unexpected interruption");
+      },
+    })(request()),
+    502,
+    "DELIVERY_PENDING",
+    receipt.reference
+  );
+});
+
+test("acknowledgements include only fixed receipt text and a stable reference", () => {
+  const untrusted = {
+    ...values,
+    name: "Untrusted recipient name",
+    message: "https://untrusted.example/visitor-controlled-message",
+  };
+  for (const locale of ["en", "ar"] as const) {
+    const mail = enquiryAcknowledgement({ ...untrusted, locale }, requestId);
+    assert.match(mail.text, new RegExp(enquiryReference(requestId)));
+    assert.equal(mail.text.includes(untrusted.name), false);
+    assert.equal(mail.text.includes(untrusted.message), false);
+    assert.equal(mail.subject.includes(untrusted.email), false);
+  }
 });

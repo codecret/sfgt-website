@@ -223,6 +223,10 @@ export async function PremiumFooter({ locale }: LocaleProps) {
     locale,
     namespace: "Website.premiumCompany",
   });
+  const contact = await getTranslations({
+    locale,
+    namespace: "Website.contact",
+  });
   const productLinks = [
     { key: "batteries", href: "/products/batteries" },
     { key: "lighting", href: "/products/led-lighting" },
@@ -299,7 +303,10 @@ export async function PremiumFooter({ locale }: LocaleProps) {
               company: company.name,
             })}
           </p>
-          <Link href="/support">{t("footer.supportLink")}</Link>
+          <div className="premium-footer-preferences">
+            <Link href="/privacy">{contact("privacyLink")}</Link>
+            <Link href="/support">{t("footer.supportLink")}</Link>
+          </div>
         </div>
       </div>
     </footer>

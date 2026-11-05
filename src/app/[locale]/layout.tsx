@@ -28,16 +28,19 @@ const arabicFont = IBM_Plex_Sans_Arabic({
   weight: ["400", "500", "600", "700"],
   subsets: ["arabic", "latin"],
   display: "swap",
+  preload: false,
 });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  preload: false,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  preload: false,
 });
 
 export const metadata: Metadata = {
