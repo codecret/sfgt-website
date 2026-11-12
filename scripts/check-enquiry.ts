@@ -49,7 +49,7 @@ test("MXroute API sends to the fixed address with escaped text and a buyer reply
     },
     async (url, init) => {
       assert.equal(url, "https://smtpapi.mxroute.com/");
-      assert.equal(init?.redirect, "error");
+      assert.equal(init?.redirect, "manual");
       const mail = JSON.parse(String(init?.body));
       assert.equal(mail.to, "sales@example.com");
       assert.match(mail.body, /First line<br>&lt;img src=x&gt;&amp;/);
@@ -65,8 +65,10 @@ test("MXroute API only treats a clear rejection as a failed send", async () => {
   const message = { from: "sales@example.com", to: "sales@example.com", subject: "Test", text: "Test body" };
   const reject = async () => Response.json({ success: false }, { status: 401 });
   const unavailable = async () => Response.json({ success: false }, { status: 503 });
+  const redirect = async () => Response.redirect("https://example.com", 307);
   assert.equal(await sendMxrouteMessage(credentials, message, reject), "failed");
   assert.equal(await sendMxrouteMessage(credentials, message, unavailable), "unknown");
+  assert.equal(await sendMxrouteMessage(credentials, message, redirect), "unknown");
 });
 
 function request(body: unknown = payload, headers: HeadersInit = {}) {

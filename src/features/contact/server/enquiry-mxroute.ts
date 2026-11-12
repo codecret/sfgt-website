@@ -39,9 +39,11 @@ export async function sendMxrouteMessage(
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...credentials, from, to, subject, body }),
-      redirect: "error",
+      redirect: "manual",
       signal: AbortSignal.timeout(12000),
     });
+    // Never forward the request or its mailbox credentials to a redirect.
+    if (response.status >= 300 && response.status < 400) return "unknown";
     // A timeout or server error leaves delivery uncertain. Do not resend.
     if (response.status >= 500 || response.status === 408) return "unknown";
     const result: { success?: boolean } | null = await response.json();
