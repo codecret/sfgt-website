@@ -8,6 +8,7 @@ import {
   createEnquiryLimiter,
 } from "../src/features/contact/server/enquiry-handler";
 import { sendEnquiryMessage } from "../src/features/contact/server/enquiry-message";
+import { sendMxrouteMessage } from "../src/features/contact/server/enquiry-mxroute";
 import {
   sendSmtpEnquiry,
   sendSmtpEnquiryStatus,
@@ -35,6 +36,38 @@ const values = {
 const requestId = "0433f48d-81ab-4f73-8060-f461c694fe10";
 const payload = { ...values, requestId };
 const origin = "http://localhost:4318";
+
+test("MXroute API sends to the fixed address with escaped text and a buyer reply link", async () => {
+  const status = await sendMxrouteMessage(
+    { server: "sunfire.mxrouting.net", username: "sales@example.com", password: "fake-password" },
+    {
+      from: "sales@example.com",
+      to: "sales@example.com",
+      subject: "Test enquiry",
+      text: "First line\n<img src=x>&",
+      replyTo: "buyer+test@example.com",
+    },
+    async (url, init) => {
+      assert.equal(url, "https://smtpapi.mxroute.com/");
+      assert.equal(init?.redirect, "error");
+      const mail = JSON.parse(String(init?.body));
+      assert.equal(mail.to, "sales@example.com");
+      assert.match(mail.body, /First line<br>&lt;img src=x&gt;&amp;/);
+      assert.match(mail.body, /href="mailto:buyer%2Btest@example\.com"/);
+      return Response.json({ success: true });
+    }
+  );
+  assert.equal(status, "sent");
+});
+
+test("MXroute API only treats a clear rejection as a failed send", async () => {
+  const credentials = { server: "sunfire.mxrouting.net", username: "sales@example.com", password: "fake-password" };
+  const message = { from: "sales@example.com", to: "sales@example.com", subject: "Test", text: "Test body" };
+  const reject = async () => Response.json({ success: false }, { status: 401 });
+  const unavailable = async () => Response.json({ success: false }, { status: 503 });
+  assert.equal(await sendMxrouteMessage(credentials, message, reject), "failed");
+  assert.equal(await sendMxrouteMessage(credentials, message, unavailable), "unknown");
+});
 
 function request(body: unknown = payload, headers: HeadersInit = {}) {
   return new Request(`${origin}/api/enquiry`, {

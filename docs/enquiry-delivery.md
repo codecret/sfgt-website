@@ -26,6 +26,10 @@ The owner selected the existing `tbts@sfgt-tbts.com` mailbox. Keep its authorise
 
 Enquiries go only to `company.email` in `src/features/catalogue/catalogue.ts`, currently `tbts@sfgt-tbts.com`. The visitor’s address is **Reply-To**, not the sender. The server does not accept a recipient from the browser.
 
+### Cloudflare Workers
+
+Set `CONTACT_MAIL_TRANSPORT=mxroute-api` on the Worker to submit through [MXroute’s HTTPS API](https://docs.mxroute.com/docs/api/smtp-api.html) with the same mailbox host, username and password. The API does not use `CONTACT_SMTP_PORT` or accept a documented Reply-To header. Enquiry emails include a direct link to reply to the buyer. Customer confirmations use the company mailbox as the sender.
+
 ## Existing Resend alternative
 
 If SMTP is not configured, direct delivery can use `RESEND_API_KEY` plus `CONTACT_FROM_EMAIL` on a domain verified by that Resend account. Fully configured SMTP takes precedence over Resend. Sending failures do not trigger automatic provider fallback because an uncertain result could create duplicate messages.
