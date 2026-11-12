@@ -3032,25 +3032,29 @@
   {
     "source": "https://cdn.shopify.com/s/files/1/0713/7299/6857/files/tekbatt-aa-rechargeable-battery-12v-1000mah-pack-of-2batteriestekbattal-kabayel-discount-centre-647981.jpg?v=1748265147",
     "path": "/images/catalogue/tekbatt/tekbatt-rechargeable-aa-1.webp",
-    "bytes": 67288,
-    "retained": true
+    "bytes": 233872,
+    "retained": true,
+    "processing": "AI-assisted photo restoration"
   },
   {
     "source": "https://cdn.shopify.com/s/files/1/0713/7299/6857/files/tekbatt-aaa-rechargeable-battery-12v-950mah-pack-of-2batteriestekbattal-kabayel-discount-centre-329991.jpg?v=1748265146",
     "path": "/images/catalogue/tekbatt/tekbatt-rechargeable-aaa-1.webp",
-    "bytes": 93332,
-    "retained": true
+    "bytes": 313556,
+    "retained": true,
+    "processing": "AI-assisted photo restoration"
   },
   {
     "source": "https://cdn.shopify.com/s/files/1/0625/5027/8191/files/pan-home-tekbatt-general-purpose-aa-battery-30-pieces-blue-182tet9900047-5.webp?v=1781874825",
     "path": "/images/catalogue/tekbatt/tekbatt-general-purpose-aa-1.webp",
-    "bytes": 63410,
-    "retained": true
+    "bytes": 130070,
+    "retained": true,
+    "processing": "AI-assisted photo restoration"
   },
   {
     "source": "https://cdn.shopify.com/s/files/1/0625/5027/8191/files/pan-home-tekbatt-general-purpose-aaa-battery-30-pieces-blue-182tet9900046-4.webp?v=1781874816",
     "path": "/images/catalogue/tekbatt/tekbatt-general-purpose-aaa-1.webp",
-    "bytes": 74046,
-    "retained": true
+    "bytes": 123992,
+    "retained": true,
+    "processing": "AI-assisted photo restoration"
   }
 ]
