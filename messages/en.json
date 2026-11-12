@@ -328,7 +328,7 @@
       "removeFilter": "Remove {filter} filter",
       "pagination": "Catalogue pages",
       "landingTitle": "Find the right product range.",
-      "landingIntro": "Browse Toshiba batteries and lighting, or explore the SFGT commodities catalogue. Compare product details and send your requirements to our team.",
+      "landingIntro": "Browse Toshiba batteries and lighting, Tekbatt batteries and the SFGT commodities catalogue. Compare product details and send your requirements to our team.",
       "listedProducts": "products in the catalogue",
       "chooseRange": "Browse by range",
       "browseAll": "Browse all products",
@@ -338,8 +338,8 @@
         "led-lighting": "Lamps, filament lighting and tubes, with model specifications and available variants.",
         "commodities": "Food commodities, chemicals, construction materials and hospitality supplies."
       },
-      "tekbattTitle": "Alkaline & rechargeable ranges",
-      "tekbattIntro": "Looking for Tekbatt? View the battery ranges and contact our team for model and supply enquiries.",
+      "tekbattTitle": "Tekbatt batteries",
+      "tekbattIntro": "AA and AAA batteries in Super Heavy Duty, Alkaline Power, Rechargeable and General Purpose ranges.",
       "tekbattAction": "Explore Tekbatt",
       "quoteTitle": "Ready to request a quotation?",
       "quoteIntro": "Include the product or specification, quantity, packaging and delivery destination. Product availability is confirmed on enquiry.",
@@ -778,7 +778,8 @@
         "label": "Explore our product ranges",
         "batteries": "Batteries",
         "lighting": "Lighting",
-        "commodities": "Commodities"
+        "commodities": "Commodities",
+        "tekbatt": "Tekbatt"
       },
       "commodities": {
         "title": "Commodities & Commercial Supplies",

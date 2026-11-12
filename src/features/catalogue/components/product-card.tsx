@@ -32,6 +32,7 @@ export function ProductCard({
         <div className="product-card-image">
           <Image
             src={product.images[0]}
+            quality={product.division === "tekbatt-batteries" ? 90 : undefined}
             alt={product.name}
             fill
             className={

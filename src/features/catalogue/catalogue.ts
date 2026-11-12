@@ -5,6 +5,15 @@ export const categories: Category[] = data.categories;
 export const products: Product[] = data.products;
 export const downloads: Download[] = data.downloads;
 export const brand = data.brand;
+export const divisionBrand = (division: string) => {
+  switch (division) {
+    case "batteries":
+    case "led-lighting":
+      return "Toshiba";
+    case "tekbatt-batteries":
+      return "Tekbatt";
+  }
+};
 export const auditedAt = data.auditedAt;
 export const categoryBySlug = new Map(
   categories.map((category) => [category.slug, category])

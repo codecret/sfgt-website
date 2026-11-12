@@ -6,6 +6,7 @@ import {
   ancestorsOf,
   categoryBySlug,
   childrenOf,
+  divisionBrand,
   localize,
   products,
 } from "../catalogue";
@@ -216,9 +217,7 @@ export async function CatalogueBrowser({
       >
         <div className="battery-intro-copy">
           <p className="battery-eyebrow">
-            <span>
-              {division && division !== "commodities" ? "TOSHIBA" : "SFGT"}
-            </span>
+            <span>{divisionBrand(division)?.toUpperCase() ?? "SFGT"}</span>
             <span>{t("eyebrow")}</span>
           </p>
           <h1>{category ? localize(category.name, locale) : t("title")}</h1>
@@ -242,6 +241,7 @@ export async function CatalogueBrowser({
             <div>
               <Image
                 src={visual}
+                quality={division === "tekbatt-batteries" ? 90 : undefined}
                 alt=""
                 fill
                 priority

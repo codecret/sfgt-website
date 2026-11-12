@@ -114,7 +114,7 @@ export async function CatalogueLanding({ locale }: { locale: string }) {
           <h2>{t("tekbattTitle")}</h2>
         </div>
         <p>{t("tekbattIntro")}</p>
-        <Link href="https://tekbatt.com/shop/">
+        <Link href="/products/tekbatt-batteries">
           {t("tekbattAction")}
           <ArrowUpRight size={18} aria-hidden="true" />
         </Link>

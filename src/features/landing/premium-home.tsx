@@ -9,6 +9,7 @@ import {
   Wheat,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import { categoryBySlug } from "@/features/catalogue/catalogue";
 import { Link } from "@/i18n/navigation";
 import { PremiumProducts, ToshibaShowcase } from "./premium-products";
 import {
@@ -46,6 +47,11 @@ export async function PremiumHome({
       key: "commodities",
       href: "/products/commodities",
       image: "/images/supplier-home/generated/seeds-v1.webp",
+    },
+    {
+      key: "tekbatt",
+      href: "/products/tekbatt-batteries",
+      image: categoryBySlug.get("tekbatt-batteries")!.image,
     },
   ];
   const commodityLinks = [
@@ -119,6 +125,7 @@ export async function PremiumHome({
               <span className="premium-category-image">
                 <Image
                   src={category.image}
+                  quality={category.key === "tekbatt" ? 90 : undefined}
                   alt=""
                   width={76}
                   height={76}

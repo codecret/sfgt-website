@@ -8,7 +8,12 @@ import {
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { categoryBySlug, localize, productsIn } from "../catalogue";
+import {
+  categoryBySlug,
+  divisionBrand,
+  localize,
+  productsIn,
+} from "../catalogue";
 import { absoluteUrl, siteOrigin } from "../metadata";
 import type { Product } from "../types";
 import { Breadcrumbs } from "./breadcrumbs";
@@ -30,6 +35,7 @@ export async function ProductDetail({
   const related = productsIn(product.category)
     .filter((item) => item.id !== product.id)
     .slice(0, 3);
+  const manufacturer = divisionBrand(product.division);
   const led = product.division === "led-lighting";
   const firstDescription = product.description[0] ?? "";
   const summaryDescription =
@@ -87,9 +93,7 @@ export async function ProductDetail({
       <div className="product-detail-hero">
         <header className="product-detail-heading">
           <div className="product-detail-brand">
-            <span>
-              {product.division === "commodities" ? "SFGT" : "TOSHIBA"}
-            </span>
+            <span>{manufacturer?.toUpperCase() ?? "SFGT"}</span>
             <Link href={`/products/${category.slug}`}>
               {localize(category.name, locale)}
             </Link>
@@ -377,15 +381,19 @@ export async function ProductDetail({
             <ul>
               {product.sources.map((url, index) => (
                 <li key={url}>
-                  <a
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline underline-offset-4"
-                  >
-                    {t("catalogue.source")} {index + 1} ·{" "}
-                    <bdi dir="ltr">{new URL(url).hostname}</bdi>
-                  </a>
+                  {/^https?:\/\//i.test(url) ? (
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-4"
+                    >
+                      {t("catalogue.source")} {index + 1} ·{" "}
+                      <bdi dir="ltr">{new URL(url).hostname}</bdi>
+                    </a>
+                  ) : (
+                    <bdi dir="ltr">{url}</bdi>
+                  )}
                 </li>
               ))}
             </ul>
@@ -436,8 +444,8 @@ export async function ProductDetail({
             new URL(path, siteOrigin()).toString()
           ),
           category: category.name.en,
-          ...(product.division !== "commodities"
-            ? { brand: { "@type": "Brand", name: "Toshiba" } }
+          ...(manufacturer
+            ? { brand: { "@type": "Brand", name: manufacturer } }
             : {}),
           ...(product.productCode ? { mpn: product.productCode } : {}),
           ...(variants.length > 1

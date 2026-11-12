@@ -96,7 +96,7 @@ export function SiteNavbar({
     {
       brand: "Tekbatt",
       title: isArabic ? "مجموعات البطاريات" : "Battery ranges",
-      href: "https://tekbatt.com/shop/",
+      href: "/products/tekbatt-batteries",
     },
     {
       brand: isArabic ? "التجارة العامة" : "General trading",

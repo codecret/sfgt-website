@@ -23,19 +23,19 @@ const paths = new Set([
     (item) => `/products/${item.slug}`
   ),
 ]);
-assert.equal(data.products.length, 206);
-assert.equal(data.categories.length, 63);
+assert.equal(data.products.length, 214);
+assert.equal(data.categories.length, 64);
 assert.equal(
   new Set([...data.categories, ...data.products].map((item) => item.slug)).size,
   data.categories.length + data.products.length,
   "Category/product slugs must not collide"
 );
 assert.deepEqual(
-  ["batteries", "led-lighting", "commodities"].map(
+  ["batteries", "led-lighting", "commodities", "tekbatt-batteries"].map(
     (division) =>
       data.products.filter((product) => product.division === division).length
   ),
-  [82, 65, 59]
+  [82, 65, 59, 8]
 );
 for (const source of inventory) {
   assert.ok(mapping[source.url], `Missing source route mapping: ${source.url}`);

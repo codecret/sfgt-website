@@ -56,6 +56,11 @@ export function ProductGallery({
       <div className="product-gallery-stage" id={imageId}>
         <Image
           src={images[active]}
+          quality={
+            images[active].startsWith("/images/catalogue/tekbatt/")
+              ? 90
+              : undefined
+          }
           alt={
             name +
             " — " +

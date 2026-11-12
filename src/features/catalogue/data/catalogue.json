@@ -34,6 +34,26 @@
       "image": "/images/catalogue/c90d2e9360-09112024040359tubet8prod1.png"
     },
     {
+      "slug": "tekbatt-batteries",
+      "name": {
+        "en": "Tekbatt batteries",
+        "ar": "بطاريات تيكبات"
+      },
+      "parent": "",
+      "description": {
+        "en": "Browse Tekbatt AA and AAA batteries in Super Heavy Duty, Alkaline Power, Rechargeable and General Purpose ranges.",
+        "ar": "تصفّح بطاريات تيكبات بمقاسي AA وAAA، بما فيها البطاريات فائقة التحمل والقلوية والقابلة لإعادة الشحن وبطاريات الاستخدام العام."
+      },
+      "sources": [
+        "TEKBATT.pptx#slide3",
+        "TEKBATT.pptx#slide4",
+        "TEKBATT.pptx#slide5"
+      ],
+      "ranges": [],
+      "productCount": 8,
+      "image": "/images/catalogue/tekbatt/tekbatt-alkaline-power-aa-1.webp"
+    },
+    {
       "slug": "commodities",
       "name": {
         "en": "Commodities & supplies",
@@ -12800,6 +12820,286 @@
         "alkaline-batteries",
         "high-power"
       ]
+    },
+    {
+      "id": "tekbatt-super-heavy-duty-aa",
+      "slug": "tekbatt-super-heavy-duty-aa",
+      "name": "Tekbatt Super Heavy Duty AA",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": [
+        "tekbatt-batteries"
+      ],
+      "family": "Super Heavy Duty",
+      "sourceCategories": [
+        "تيكبات",
+        "بطاريات فائقة التحمل"
+      ],
+      "description": [],
+      "productCode": "",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": [
+        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aa-1.webp",
+        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aa-2.webp",
+        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aa-3.webp",
+        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aa-4.webp",
+        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aa-5.webp",
+        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aa-6.webp",
+        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aa-7.webp"
+      ],
+      "imageSources": [
+        "TEKBATT.pptx#ppt/media/image16.jpeg",
+        "TEKBATT.pptx#ppt/media/image6.jpg",
+        "TEKBATT.pptx#ppt/media/image8.jpg",
+        "TEKBATT.pptx#ppt/media/image9.jpg",
+        "TEKBATT.pptx#ppt/media/image12.jpg",
+        "TEKBATT.pptx#ppt/media/image13.jpg",
+        "TEKBATT.pptx#ppt/media/image14.jpg"
+      ],
+      "sources": [
+        "TEKBATT.pptx#slide3"
+      ],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-super-heavy-duty-aaa",
+      "slug": "tekbatt-super-heavy-duty-aaa",
+      "name": "Tekbatt Super Heavy Duty AAA",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": [
+        "tekbatt-batteries"
+      ],
+      "family": "Super Heavy Duty",
+      "sourceCategories": [
+        "تيكبات",
+        "بطاريات فائقة التحمل"
+      ],
+      "description": [],
+      "productCode": "",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": [
+        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aaa-1.webp",
+        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aaa-2.webp",
+        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aaa-3.webp",
+        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aaa-4.webp",
+        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aaa-5.webp"
+      ],
+      "imageSources": [
+        "TEKBATT.pptx#ppt/media/image17.jpeg",
+        "TEKBATT.pptx#ppt/media/image5.jpg",
+        "TEKBATT.pptx#ppt/media/image7.jpg",
+        "TEKBATT.pptx#ppt/media/image10.jpg",
+        "TEKBATT.pptx#ppt/media/image11.jpg"
+      ],
+      "sources": [
+        "TEKBATT.pptx#slide3"
+      ],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-alkaline-power-aa",
+      "slug": "tekbatt-alkaline-power-aa",
+      "name": "Tekbatt Alkaline Power AA",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": [
+        "tekbatt-batteries"
+      ],
+      "family": "Alkaline Power",
+      "sourceCategories": [
+        "تيكبات",
+        "بطاريات قلوية"
+      ],
+      "description": [],
+      "productCode": "",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": [
+        "/images/catalogue/tekbatt/tekbatt-alkaline-power-aa-1.webp",
+        "/images/catalogue/tekbatt/tekbatt-alkaline-power-aa-2.webp"
+      ],
+      "imageSources": [
+        "TEKBATT.pptx#ppt/media/image25.png",
+        "TEKBATT.pptx#ppt/media/image23.jpeg"
+      ],
+      "sources": [
+        "TEKBATT.pptx#slide5"
+      ],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-alkaline-power-aaa",
+      "slug": "tekbatt-alkaline-power-aaa",
+      "name": "Tekbatt Alkaline Power AAA",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": [
+        "tekbatt-batteries"
+      ],
+      "family": "Alkaline Power",
+      "sourceCategories": [
+        "تيكبات",
+        "بطاريات قلوية"
+      ],
+      "description": [],
+      "productCode": "",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": [
+        "/images/catalogue/tekbatt/tekbatt-alkaline-power-aaa-1.webp",
+        "/images/catalogue/tekbatt/tekbatt-alkaline-power-aaa-2.webp"
+      ],
+      "imageSources": [
+        "TEKBATT.pptx#ppt/media/image24.jpeg",
+        "TEKBATT.pptx#ppt/media/image26.jpeg"
+      ],
+      "sources": [
+        "TEKBATT.pptx#slide5"
+      ],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-rechargeable-aa",
+      "slug": "tekbatt-rechargeable-aa",
+      "name": "Tekbatt Rechargeable AA",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": [
+        "tekbatt-batteries"
+      ],
+      "family": "Rechargeable",
+      "sourceCategories": [
+        "تيكبات",
+        "بطاريات قابلة لإعادة الشحن"
+      ],
+      "description": [],
+      "productCode": "",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": [
+        "/images/catalogue/tekbatt/tekbatt-rechargeable-aa-1.webp"
+      ],
+      "imageSources": [
+        "TEKBATT.pptx#ppt/media/image19.jpg"
+      ],
+      "sources": [
+        "TEKBATT.pptx#slide4"
+      ],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-rechargeable-aaa",
+      "slug": "tekbatt-rechargeable-aaa",
+      "name": "Tekbatt Rechargeable AAA",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": [
+        "tekbatt-batteries"
+      ],
+      "family": "Rechargeable",
+      "sourceCategories": [
+        "تيكبات",
+        "بطاريات قابلة لإعادة الشحن"
+      ],
+      "description": [],
+      "productCode": "",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": [
+        "/images/catalogue/tekbatt/tekbatt-rechargeable-aaa-1.webp"
+      ],
+      "imageSources": [
+        "TEKBATT.pptx#ppt/media/image22.jpg"
+      ],
+      "sources": [
+        "TEKBATT.pptx#slide4"
+      ],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-general-purpose-aa",
+      "slug": "tekbatt-general-purpose-aa",
+      "name": "Tekbatt General Purpose AA (30-pack)",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": [
+        "tekbatt-batteries"
+      ],
+      "family": "General Purpose",
+      "sourceCategories": [
+        "تيكبات",
+        "بطاريات للاستخدام العام"
+      ],
+      "description": [],
+      "productCode": "",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": [
+        "/images/catalogue/tekbatt/tekbatt-general-purpose-aa-1.webp"
+      ],
+      "imageSources": [
+        "TEKBATT.pptx#ppt/media/image20.jpg"
+      ],
+      "sources": [
+        "TEKBATT.pptx#slide4"
+      ],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-general-purpose-aaa",
+      "slug": "tekbatt-general-purpose-aaa",
+      "name": "Tekbatt General Purpose AAA (30-pack)",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": [
+        "tekbatt-batteries"
+      ],
+      "family": "General Purpose",
+      "sourceCategories": [
+        "تيكبات",
+        "بطاريات للاستخدام العام"
+      ],
+      "description": [],
+      "productCode": "",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": [
+        "/images/catalogue/tekbatt/tekbatt-general-purpose-aaa-1.webp"
+      ],
+      "imageSources": [
+        "TEKBATT.pptx#ppt/media/image21.jpg"
+      ],
+      "sources": [
+        "TEKBATT.pptx#slide4"
+      ],
+      "downloads": [],
+      "notes": []
     }
   ],
   "downloads": [
