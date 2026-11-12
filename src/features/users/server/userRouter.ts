@@ -1,7 +1,7 @@
-import { db } from "@/db";
+import { requireDb } from "@/db";
 import { deleteUserById, getAllUsers, getUserById } from "@/db/queries";
 import { account, users } from "@/db/schema/user";
-import { auth } from "@/lib/auth";
+import { requireAuth } from "@/lib/auth";
 import {
   createTRPCRouter,
   protectedAdminProcedure,
@@ -36,7 +36,7 @@ export const userRouter = createTRPCRouter({
       })
     )
     .mutation(async ({ input }) => {
-      const newUser = await auth.api.createUser({
+      const newUser = await requireAuth().api.createUser({
         headers: await headers(),
         body: {
           name: input.name,
@@ -66,7 +66,8 @@ export const userRouter = createTRPCRouter({
       })
     )
     .mutation(async ({ input }) => {
-      const ctx = await auth.$context;
+      const db = requireDb();
+      const ctx = await requireAuth().$context;
       const { password } = input;
       if (password) {
         const passwordInput = await ctx.password.hash(password);

@@ -1,14 +1,15 @@
-import { auth } from "@/lib/auth";
+import { auth, type Auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
-export type ServerSession = Awaited<ReturnType<typeof auth.api.getSession>>;
+export type ServerSession = Awaited<ReturnType<Auth["api"]["getSession"]>>;
 
 /**
  * Get the current session directly from Better Auth (no HTTP roundtrip).
  * Server-side only.
  */
 export const getSession = async (): Promise<ServerSession> => {
+  if (!auth) return null;
   return auth.api.getSession({ headers: await headers() });
 };
 

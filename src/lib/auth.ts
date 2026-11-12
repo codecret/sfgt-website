@@ -1,4 +1,4 @@
-import { db } from "@/db/index";
+import { requireDb } from "@/db/index";
 import { account, session, users, verification } from "@/db/schema/user";
 import { env } from "@/lib/env";
 import { betterAuth } from "better-auth";
@@ -11,11 +11,11 @@ import { sendResetPasswordEmail } from "@/lib/email/resend";
  * Better Auth configuration
  * @see https://www.better-auth.com/docs
  */
-export const auth = betterAuth({
+const createAuth = () => betterAuth({
   /**
    * Database adapter configuration
    */
-  database: drizzleAdapter(db, {
+  database: drizzleAdapter(requireDb(), {
     provider: "pg",
     schema: { user: users, account, session, verification },
   }),
@@ -98,7 +98,13 @@ export const auth = betterAuth({
   },
 });
 
-/**
- * Export auth type for client usage
- */
-export type Auth = typeof auth;
+export const auth = env.DATABASE_URL ? createAuth() : undefined;
+
+export function requireAuth() {
+  if (!auth) {
+    throw new Error("DATABASE_URL is required for dashboard authentication.");
+  }
+  return auth;
+}
+
+export type Auth = ReturnType<typeof createAuth>;

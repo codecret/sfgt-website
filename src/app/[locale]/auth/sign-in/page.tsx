@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 import { UserAuthForm } from "@/features/auth/components/user-auth-form";
 import Link from "next/link";
-import { auth } from "@/lib/auth";
-import { headers } from "next/headers";
+import { getSession } from "@/utils/authUtils";
 import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 
@@ -15,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Login() {
-  const session = await auth.api.getSession({ headers: await headers() });
+  const session = await getSession();
 
   const t = await getTranslations("Auth");
   if (session) {

@@ -3,25 +3,25 @@ import { Pool } from "pg";
 import * as schema from "./schema/user";
 import { env } from "@/lib/env";
 
-/**
- * Connection pool configuration for production
- * @see https://orm.drizzle.team/docs/get-started-postgresql#node-postgres
- */
-const pool = new Pool({
-  connectionString: env.DATABASE_URL,
-  // Connection pool settings for production
-  max: 10, // Maximum number of clients in the pool
-  idleTimeoutMillis: 30000, // Close idle clients after 30 seconds
-  connectionTimeoutMillis: 2000, // Return an error after 2 seconds if connection cannot be established
-});
+function createDatabase(connectionString: string) {
+  const pool = new Pool({
+    connectionString,
+    max: 10,
+    idleTimeoutMillis: 30000,
+    connectionTimeoutMillis: 2000,
+  });
 
-/**
- * Drizzle ORM instance with schema and logging
- */
-export const db = drizzle(pool, {
-  schema,
-  logger: process.env.NODE_ENV === "development",
-});
+  return drizzle(pool, { schema, logger: env.NODE_ENV === "development" });
+}
+
+const db = env.DATABASE_URL ? createDatabase(env.DATABASE_URL) : undefined;
+
+export function requireDb() {
+  if (!db) {
+    throw new Error("DATABASE_URL is required for dashboard database access.");
+  }
+  return db;
+}
 
 /**
  * Export schema for use in other files
@@ -31,4 +31,4 @@ export * from "./schema/user";
 /**
  * Type helper for database transactions
  */
-export type Database = typeof db;
+export type Database = ReturnType<typeof createDatabase>;

@@ -20,7 +20,7 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Configure the local environment using `.env.example`. Do not commit credentials or copy production mailbox credentials into the starter repository.
+Configure the local environment using `.env.example`. The public website and enquiry form run without `DATABASE_URL`. Set it when working on dashboard authentication or running the Drizzle database commands. Do not commit credentials or copy production mailbox credentials into the starter repository.
 
 ## Commands
 

@@ -18,7 +18,8 @@ export const env = createEnv({
       .refine(
         (url) => url.startsWith("postgres"),
         "DATABASE_URL must be a PostgreSQL connection string"
-      ),
+      )
+      .optional(),
 
     // Authentication
     BETTER_AUTH_SECRET: z

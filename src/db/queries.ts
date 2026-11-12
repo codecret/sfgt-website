@@ -1,6 +1,6 @@
-import { db } from ".";
+import { requireDb } from ".";
 import { users } from "./schema/user";
-import { auth } from "@/lib/auth";
+import { requireAuth } from "@/lib/auth";
 import { eq } from "drizzle-orm";
 import { headers } from "next/headers";
 
@@ -15,7 +15,7 @@ export async function getAllUsers({
   limit = 100,
   offset = 0,
 }: GetAllUsersParams) {
-  return auth.api.listUsers({
+  return requireAuth().api.listUsers({
     headers: await headers(),
     query: {
       ...(search
@@ -33,13 +33,13 @@ export async function getAllUsers({
   });
 }
 export async function getUserById(id: string) {
-  return db.query.users.findFirst({ where: eq(users.id, id) });
+  return requireDb().query.users.findFirst({ where: eq(users.id, id) });
 }
 
 export async function deleteUserById(id: string) {
   try {
     // Call the Better Auth API to remove the user
-    const result = await auth.api.removeUser({
+    const result = await requireAuth().api.removeUser({
       headers: await headers(),
       body: {
         userId: id,

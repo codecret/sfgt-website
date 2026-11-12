@@ -2,8 +2,7 @@ import { cache } from "react";
 import { initTRPC, TRPCError } from "@trpc/server";
 import superjson from "superjson";
 import * as z from "zod";
-import { auth } from "../auth";
-import { headers } from "next/headers";
+import { getSession } from "@/utils/authUtils";
 
 /**
  * Context creation for tRPC
@@ -70,8 +69,7 @@ export const publicProcedure = t.procedure;
  * Reusable middleware to check if user is authenticated
  */
 const isAuthenticated = middleware(async ({ next }) => {
-  const requestHeaders = await headers();
-  const session = await auth.api.getSession({ headers: requestHeaders });
+  const session = await getSession();
 
   if (!session?.user) {
     throw new TRPCError({
@@ -97,8 +95,7 @@ export const protectedProcedure = t.procedure.use(isAuthenticated);
  * Reusable middleware to check if user is admin
  */
 const isAdmin = middleware(async ({ next }) => {
-  const requestHeaders = await headers();
-  const session = await auth.api.getSession({ headers: requestHeaders });
+  const session = await getSession();
 
   if (!session?.user) {
     throw new TRPCError({
