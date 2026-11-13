@@ -328,7 +328,7 @@
       "removeFilter": "Remove {filter} filter",
       "pagination": "Catalogue pages",
       "landingTitle": "Find the right product range.",
-      "landingIntro": "Browse Toshiba batteries and lighting, Tekbatt batteries and the SFGT commodities catalogue. Compare product details and send your requirements to our team.",
+      "landingIntro": "Browse Toshiba batteries and lighting, TEKBATT batteries and the SFGT commodities catalogue. Compare product details and send your requirements to our team.",
       "listedProducts": "products in the catalogue",
       "chooseRange": "Browse by range",
       "browseAll": "Browse all products",
@@ -338,9 +338,9 @@
         "led-lighting": "Lamps, filament lighting and tubes, with model specifications and available variants.",
         "commodities": "Food commodities, chemicals, construction materials and hospitality supplies."
       },
-      "tekbattTitle": "Tekbatt batteries",
+      "tekbattTitle": "TEKBATT batteries",
       "tekbattIntro": "AA and AAA batteries in Super Heavy Duty, Alkaline Power, Rechargeable and General Purpose ranges.",
-      "tekbattAction": "Explore Tekbatt",
+      "tekbattAction": "Explore TEKBATT",
       "quoteTitle": "Ready to request a quotation?",
       "quoteIntro": "Include the product or specification, quantity, packaging and delivery destination. Product availability is confirmed on enquiry.",
       "requestQuote": "Request a quote"
@@ -352,7 +352,7 @@
       "who": "Toshiba distribution",
       "whoText": "Our Toshiba distribution activity serves customers in the GCC, Yemen, India and Bangladesh. The catalogue covers batteries, portable power and LED lighting, with product codes and specifications to help customers identify their requirements.",
       "what": "Sourcing and supply",
-      "whatText": "Alongside Toshiba products and Tekbatt battery ranges, we handle food commodities, chemicals, construction materials and hospitality supplies. Our team works with customers on product selection, quotations, warehousing and delivery arrangements.",
+      "whatText": "Alongside Toshiba products and TEKBATT battery ranges, we handle food commodities, chemicals, construction materials and hospitality supplies. Our team works with customers on product selection, quotations, warehousing and delivery arrangements.",
       "values": "How we work",
       "valuesText": "Honesty, loyalty and commitment guide our relationships. We focus on quality, timely delivery, transparent communication and long-term relationships with customers and suppliers.",
       "vision": "Our direction",
@@ -376,7 +376,7 @@
           "description": "Battery formats, pack sizes, lamps and tubes. Browse models and technical specifications in our product catalogue."
         },
         "tekbatt": {
-          "title": "Tekbatt battery ranges",
+          "title": "TEKBATT battery ranges",
           "description": "Explore alkaline and rechargeable ranges, then contact our team with the model and quantity you require."
         },
         "commodities": {
@@ -502,7 +502,7 @@
       "divisionPlaceholder": "Select a division (optional)",
       "divisions": {
         "toshiba": "Toshiba batteries & lighting",
-        "tekbatt": "Tekbatt battery ranges",
+        "tekbatt": "TEKBATT battery ranges",
         "commodities": "Commodities & general trading",
         "distribution": "Distribution partnership"
       },
@@ -779,7 +779,7 @@
         "batteries": "Batteries",
         "lighting": "Lighting",
         "commodities": "Commodities",
-        "tekbatt": "Tekbatt"
+        "tekbatt": "TEKBATT"
       },
       "commodities": {
         "title": "Commodities & Commercial Supplies",
@@ -936,7 +936,7 @@
         "links": {
           "batteries": "Batteries",
           "lighting": "LED lighting",
-          "tekbatt": "Tekbatt",
+          "tekbatt": "TEKBATT",
           "commodities": "Commodities",
           "allProducts": "Browse product ranges",
           "about": "About us",

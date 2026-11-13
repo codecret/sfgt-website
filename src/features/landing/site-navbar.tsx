@@ -94,7 +94,7 @@ export function SiteNavbar({
       href: "/products/led-lighting",
     },
     {
-      brand: "Tekbatt",
+      brand: "TEKBATT",
       title: isArabic ? "مجموعات البطاريات" : "Battery ranges",
       href: "/products/tekbatt-batteries",
     },

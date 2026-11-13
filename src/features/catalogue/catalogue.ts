@@ -11,7 +11,7 @@ export const divisionBrand = (division: string) => {
     case "led-lighting":
       return "Toshiba";
     case "tekbatt-batteries":
-      return "Tekbatt";
+      return "TEKBATT";
   }
 };
 export const auditedAt = data.auditedAt;

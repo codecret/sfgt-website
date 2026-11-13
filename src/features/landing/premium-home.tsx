@@ -46,7 +46,7 @@ export async function PremiumHome({
     {
       key: "commodities",
       href: "/products/commodities",
-      image: "/images/supplier-home/generated/seeds-v1.webp",
+      image: "/images/premium-home/commodities-thumb.webp",
     },
     {
       key: "tekbatt",
@@ -125,11 +125,17 @@ export async function PremiumHome({
               <span className="premium-category-image">
                 <Image
                   src={category.image}
+                  className={
+                    category.key === "commodities"
+                      ? "premium-category-photo"
+                      : undefined
+                  }
+                  unoptimized={category.key === "commodities"}
                   quality={category.key === "tekbatt" ? 90 : undefined}
                   alt=""
-                  width={76}
-                  height={76}
-                  sizes="76px"
+                  loading="eager"
+                  width={56}
+                  height={56}
                 />
               </span>
               <strong>{t(`categories.${category.key}`)}</strong>

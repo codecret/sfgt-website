@@ -36,13 +36,13 @@
     {
       "slug": "tekbatt-batteries",
       "name": {
-        "en": "Tekbatt batteries",
-        "ar": "بطاريات تيكبات"
+        "en": "TEKBATT batteries",
+        "ar": "بطاريات TEKBATT"
       },
       "parent": "",
       "description": {
-        "en": "Browse Tekbatt AA and AAA batteries in Super Heavy Duty, Alkaline Power, Rechargeable and General Purpose ranges.",
-        "ar": "تصفّح بطاريات تيكبات بمقاسي AA وAAA، بما فيها البطاريات فائقة التحمل والقلوية والقابلة لإعادة الشحن وبطاريات الاستخدام العام."
+        "en": "Browse TEKBATT AA and AAA batteries in Super Heavy Duty, Alkaline Power, Rechargeable and General Purpose ranges.",
+        "ar": "تصفّح بطاريات TEKBATT بمقاسي AA وAAA، بما فيها البطاريات فائقة التحمل والقلوية والقابلة لإعادة الشحن وبطاريات الاستخدام العام."
       },
       "sources": [
         "TEKBATT.pptx#slide3",
@@ -12824,7 +12824,7 @@
     {
       "id": "tekbatt-super-heavy-duty-aa",
       "slug": "tekbatt-super-heavy-duty-aa",
-      "name": "Tekbatt Super Heavy Duty AA",
+      "name": "TEKBATT Super Heavy Duty AA",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
       "categoryPath": [
@@ -12868,7 +12868,7 @@
     {
       "id": "tekbatt-super-heavy-duty-aaa",
       "slug": "tekbatt-super-heavy-duty-aaa",
-      "name": "Tekbatt Super Heavy Duty AAA",
+      "name": "TEKBATT Super Heavy Duty AAA",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
       "categoryPath": [
@@ -12908,7 +12908,7 @@
     {
       "id": "tekbatt-alkaline-power-aa",
       "slug": "tekbatt-alkaline-power-aa",
-      "name": "Tekbatt Alkaline Power AA",
+      "name": "TEKBATT Alkaline Power AA",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
       "categoryPath": [
@@ -12942,7 +12942,7 @@
     {
       "id": "tekbatt-alkaline-power-aaa",
       "slug": "tekbatt-alkaline-power-aaa",
-      "name": "Tekbatt Alkaline Power AAA",
+      "name": "TEKBATT Alkaline Power AAA",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
       "categoryPath": [
@@ -12976,7 +12976,7 @@
     {
       "id": "tekbatt-rechargeable-aa",
       "slug": "tekbatt-rechargeable-aa",
-      "name": "Tekbatt Rechargeable AA",
+      "name": "TEKBATT Rechargeable AA",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
       "categoryPath": [
@@ -13008,7 +13008,7 @@
     {
       "id": "tekbatt-rechargeable-aaa",
       "slug": "tekbatt-rechargeable-aaa",
-      "name": "Tekbatt Rechargeable AAA",
+      "name": "TEKBATT Rechargeable AAA",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
       "categoryPath": [
@@ -13040,7 +13040,7 @@
     {
       "id": "tekbatt-general-purpose-aa",
       "slug": "tekbatt-general-purpose-aa",
-      "name": "Tekbatt General Purpose AA (30-pack)",
+      "name": "TEKBATT General Purpose AA (30-pack)",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
       "categoryPath": [
@@ -13072,7 +13072,7 @@
     {
       "id": "tekbatt-general-purpose-aaa",
       "slug": "tekbatt-general-purpose-aaa",
-      "name": "Tekbatt General Purpose AAA (30-pack)",
+      "name": "TEKBATT General Purpose AAA (30-pack)",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
       "categoryPath": [
