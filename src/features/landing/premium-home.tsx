@@ -5,11 +5,10 @@ import {
   Building2,
   FlaskConical,
   Package,
-  Phone,
   Wheat,
 } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
 import { categoryBySlug } from "@/features/catalogue/catalogue";
+import { QuickContactActions } from "@/features/contact/components/quick-contact-actions";
 import { Link } from "@/i18n/navigation";
 import { PremiumProducts, ToshibaShowcase } from "./premium-products";
 import {
@@ -210,26 +209,7 @@ export async function PremiumHome({
         <PremiumQuotation locale={locale} deliveryEnabled={deliveryEnabled} />
       </main>
       <PremiumFooter locale={locale} />
-      <nav className="premium-contact-actions" aria-label={t("quickContact")}>
-        <a
-          className="premium-whatsapp"
-          href="https://wa.me/971503420157"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={t("whatsapp")}
-          title={t("whatsapp")}
-        >
-          <FaWhatsapp aria-hidden="true" />
-        </a>
-        <a
-          className="premium-call"
-          href="tel:+971503420157"
-          aria-label={t("call")}
-          title={t("call")}
-        >
-          <Phone aria-hidden="true" />
-        </a>
-      </nav>
+      <QuickContactActions showCall />
       <PremiumHomeMotion />
     </div>
   );

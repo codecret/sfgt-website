@@ -37,6 +37,9 @@ export async function ProductDetail({
     .slice(0, 3);
   const manufacturer = divisionBrand(product.division);
   const led = product.division === "led-lighting";
+  const publicSources = product.sources.filter((url) =>
+    /^https?:\/\//i.test(url)
+  );
   const firstDescription = product.description[0] ?? "";
   const summaryDescription =
     firstDescription.match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim() ||
@@ -376,12 +379,12 @@ export async function ProductDetail({
               {t("catalogue.noSpecifications")}
             </p>
           )}
-          <details className="product-source-details">
-            <summary>{t("catalogue.sourceDetails")}</summary>
-            <ul>
-              {product.sources.map((url, index) => (
-                <li key={url}>
-                  {/^https?:\/\//i.test(url) ? (
+          {publicSources.length > 0 && (
+            <details className="product-source-details">
+              <summary>{t("catalogue.sourceDetails")}</summary>
+              <ul>
+                {publicSources.map((url, index) => (
+                  <li key={url}>
                     <a
                       href={url}
                       target="_blank"
@@ -391,13 +394,11 @@ export async function ProductDetail({
                       {t("catalogue.source")} {index + 1} ·{" "}
                       <bdi dir="ltr">{new URL(url).hostname}</bdi>
                     </a>
-                  ) : (
-                    <bdi dir="ltr">{url}</bdi>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </details>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )}
         </div>
       </div>
       <section className="product-enquiry-followup">

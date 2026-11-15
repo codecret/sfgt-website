@@ -5,6 +5,8 @@ export const categories: Category[] = data.categories;
 export const products: Product[] = data.products;
 export const downloads: Download[] = data.downloads;
 export const brand = data.brand;
+export const toshibaLedCatalogueUrl =
+  "https://tsb-europe.com/wp-content/uploads/ToshibaLEDLighting-ProductsCatalogue.pdf";
 export const divisionBrand = (division: string) => {
   switch (division) {
     case "batteries":
@@ -42,4 +44,8 @@ export const company = {
     "Office and Warehouse No. 7, Al-Qusais Industrial Area 1, near Ministry of Labour",
   city: "Dubai, United Arab Emirates",
   poBox: "122577",
+  mapUrl:
+    "https://www.google.com/maps/search/?api=1&query=Sulemane+Faruk+General+Trading+Al+Qusais+Dubai",
 };
+
+export const whatsappHref = `https://wa.me/${company.whatsapp.replace(/\D/g, "")}`;

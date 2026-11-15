@@ -9,6 +9,7 @@ import {
 } from "@/features/catalogue/catalogue";
 import { JsonLd } from "@/features/catalogue/components/json-ld";
 import { siteOrigin } from "@/features/catalogue/metadata";
+import { QuickContactActions } from "@/features/contact/components/quick-contact-actions";
 
 export default async function WebsiteLayout({
   children,
@@ -31,6 +32,7 @@ export default async function WebsiteLayout({
         {children}
       </main>
       <Footer />
+      <QuickContactActions />
       <JsonLd
         data={{
           "@context": "https://schema.org",

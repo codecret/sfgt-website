@@ -11,7 +11,7 @@ import {
 import { PageHeading } from "@/features/catalogue/components/page-heading";
 import { EnquiryForm } from "@/features/contact/components/enquiry-form";
 import { getEnquiryDeliveryEnabled } from "@/features/contact/server/enquiry-delivery";
-import { company } from "@/features/catalogue/catalogue";
+import { company, whatsappHref } from "@/features/catalogue/catalogue";
 import { pageMetadata } from "@/features/catalogue/metadata";
 import "@/features/contact/components/contact-page.css";
 
@@ -74,11 +74,7 @@ export default async function ContactPage({ searchParams }: Props) {
           </span>
           <ArrowUpRight aria-hidden="true" />
         </a>
-        <a
-          href="https://wa.me/971503420157"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
           <MessageCircle aria-hidden="true" />
           <span>
             <small>{t("whatsapp")}</small>
@@ -114,6 +110,15 @@ export default async function ContactPage({ searchParams }: Props) {
               <br />
               {t("poBox", { box: company.poBox })}
             </address>
+            <a
+              href={company.mapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-primary hover:underline"
+            >
+              {t("mapAction")}
+              <ArrowUpRight size={15} aria-hidden="true" />
+            </a>
           </section>
           <section className="contact-phone">
             <Phone

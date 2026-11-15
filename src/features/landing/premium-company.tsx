@@ -18,8 +18,6 @@ import "./premium-company.css";
 
 type LocaleProps = { locale: string };
 
-const officeMap =
-  "https://www.google.com/maps/search/?api=1&query=Sulemane+Faruk+General+Trading+Al+Qusais+Dubai";
 const officeTelephone = `tel:${company.phone.replace(/[^+\d]/g, "")}`;
 
 export async function PremiumCompany({ locale }: LocaleProps) {
@@ -47,7 +45,7 @@ export async function PremiumCompany({ locale }: LocaleProps) {
           </Link>
           <a
             className="premium-company-location"
-            href={officeMap}
+            href={company.mapUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={t("company.mapAction")}
@@ -197,7 +195,11 @@ export async function PremiumQuotation({
                 <Mail size={20} strokeWidth={1.6} aria-hidden="true" />
                 <span dir="ltr">{company.email}</span>
               </a>
-              <a href={officeMap} target="_blank" rel="noopener noreferrer">
+              <a
+                href={company.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <MapPin size={20} strokeWidth={1.6} aria-hidden="true" />
                 <span>{t("quote.location")}</span>
               </a>
@@ -290,7 +292,7 @@ export async function PremiumFooter({ locale }: LocaleProps) {
               <Mail size={16} aria-hidden="true" />
               <span dir="ltr">{company.email}</span>
             </a>
-            <a href={officeMap} target="_blank" rel="noopener noreferrer">
+            <a href={company.mapUrl} target="_blank" rel="noopener noreferrer">
               <MapPin size={16} aria-hidden="true" />
               <span>{t("footer.address")}</span>
             </a>

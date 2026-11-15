@@ -32,6 +32,12 @@
 .catalogue-intro-text {
   grid-template-columns: 1fr;
 }
+.catalogue-intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 24px;
+}
 .catalogue-intro-compact {
   padding-bottom: 28px;
 }

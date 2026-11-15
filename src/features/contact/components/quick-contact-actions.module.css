@@ -1,0 +1,71 @@
+.actions {
+  position: fixed;
+  inset-inline-end: 20px;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.actions > a {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #0002;
+  transition: background-color 180ms ease;
+}
+
+.actions > a:focus-visible {
+  outline: 2px solid #202220;
+  outline-offset: 2px;
+}
+
+.whatsapp {
+  background: #12824e;
+}
+
+.whatsapp:hover {
+  background: #0c6c3e;
+}
+
+.call {
+  background: #242724;
+}
+
+.call:hover {
+  background: #000;
+}
+
+.whatsapp svg {
+  width: 27px;
+  height: 27px;
+}
+
+.call svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 767px) {
+  .actions {
+    inset-inline-end: 10px;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    gap: 8px;
+  }
+
+  .actions > a {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .actions > a {
+    transition: none;
+  }
+}

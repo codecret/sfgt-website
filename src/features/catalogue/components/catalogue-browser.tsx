@@ -1,5 +1,12 @@
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, Lightbulb, Search, X } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  ArrowUpRight,
+  Lightbulb,
+  Search,
+  X,
+} from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import {
@@ -9,6 +16,7 @@ import {
   divisionBrand,
   localize,
   products,
+  toshibaLedCatalogueUrl,
 } from "../catalogue";
 import { localizedPath } from "../metadata";
 import type { Category } from "../types";
@@ -228,10 +236,23 @@ export async function CatalogueBrowser({
                   ? localize(category.description, locale)
                   : t("description"))}
             </p>
-            <Link href={enquiry} className="battery-guide-link">
-              {ui("helpAction")}
-              <ArrowRight size={15} aria-hidden="true" />
-            </Link>
+            <div className="catalogue-intro-actions">
+              <Link href={enquiry} className="battery-guide-link">
+                {ui("helpAction")}
+                <ArrowRight size={15} aria-hidden="true" />
+              </Link>
+              {division === "led-lighting" && (
+                <a
+                  className="battery-guide-link"
+                  href={toshibaLedCatalogueUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("lightingCataloguePdf")}
+                  <ArrowUpRight size={15} aria-hidden="true" />
+                </a>
+              )}
+            </div>
           </div>
         </div>
         {visual && (

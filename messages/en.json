@@ -310,6 +310,7 @@
       "listedRanges": "Listed series",
       "source": "Source catalogue",
       "sourceDetails": "Source details",
+      "lightingCataloguePdf": "Toshiba lighting catalogue (PDF)",
       "verification": "Please confirm before ordering",
       "commodityDescription": "Contact our team to discuss {product}, including your quantity, packaging and delivery requirements.",
       "noSpecifications": "Please contact our team for the required grade, specification, packaging and availability.",
@@ -453,6 +454,7 @@
       "title": "Contact our Dubai team.",
       "intro": "Product enquiries, quotations and distribution opportunities. Send your requirements below or contact us directly.",
       "office": "Office & warehouse",
+      "mapAction": "Open in Google Maps",
       "poBox": "P.O. Box {box}",
       "general": "General enquiries",
       "toshiba": "Toshiba product enquiries",
@@ -776,8 +778,8 @@
       },
       "categories": {
         "label": "Explore our product ranges",
-        "batteries": "Batteries",
-        "lighting": "Lighting",
+        "batteries": "Toshiba Batteries",
+        "lighting": "Toshiba LED Lighting",
         "commodities": "Commodities",
         "tekbatt": "TEKBATT"
       },
