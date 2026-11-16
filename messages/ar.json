@@ -545,7 +545,13 @@
       "contact": "تواصل معنا",
       "copyright": "© {year} Sulemane Faruk General Trading LLC. جميع الحقوق محفوظة.",
       "location": "دبي، الإمارات العربية المتحدة",
-      "support": "الدعم والتنزيلات"
+      "support": "الدعم والتنزيلات",
+      "socials": {
+        "label": "حسابات التواصل الاجتماعي",
+        "toshiba": "توشيبا SFGT",
+        "tekbatt": "TEKBATT",
+        "profile": "{brand} على {platform}"
+      }
     },
     "error": {
       "title": "الصفحة غير موجودة",

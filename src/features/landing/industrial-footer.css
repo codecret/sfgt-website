@@ -15,6 +15,7 @@
   display: grid;
   grid-template-columns: 1.25fr 0.75fr 1fr 1.25fr;
   gap: 52px;
+  padding-block-end: 40px;
 }
 .industrial-footer-logo {
   display: inline-flex;
@@ -101,7 +102,6 @@
   align-items: center;
   justify-content: space-between;
   gap: 28px;
-  margin-top: 40px;
   border-top: 1px solid #d9dddc;
   padding-top: 18px;
   color: #555;

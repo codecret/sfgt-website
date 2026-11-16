@@ -13,6 +13,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { brand, company } from "@/features/catalogue/catalogue";
 import { EnquiryForm } from "@/features/contact/components/enquiry-form";
+import { FooterSocials } from "./footer-socials";
 import { PremiumSketch } from "./premium-sketch";
 import "./premium-company.css";
 
@@ -298,6 +299,7 @@ export async function PremiumFooter({ locale }: LocaleProps) {
             </a>
           </div>
         </div>
+        <FooterSocials />
         <div className="premium-footer-bottom">
           <p>
             {t("footer.copyright", {

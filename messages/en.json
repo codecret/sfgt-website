@@ -545,7 +545,13 @@
       "contact": "Get in touch",
       "copyright": "© {year} Sulemane Faruk General Trading LLC. All rights reserved.",
       "location": "Dubai, United Arab Emirates",
-      "support": "Support & downloads"
+      "support": "Support & downloads",
+      "socials": {
+        "label": "Social media profiles",
+        "toshiba": "Toshiba SFGT",
+        "tekbatt": "TEKBATT",
+        "profile": "{brand} on {platform}"
+      }
     },
     "error": {
       "title": "Page not found",

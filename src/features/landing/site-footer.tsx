@@ -8,6 +8,7 @@ import {
   company,
   localize,
 } from "@/features/catalogue/catalogue";
+import { FooterSocials } from "./footer-socials";
 import "./industrial-footer.css";
 
 export function Footer() {
@@ -95,6 +96,7 @@ export function Footer() {
             </address>
           </div>
         </div>
+        <FooterSocials />
         <div className="industrial-footer-bottom">
           <p>{t("footer.copyright", { year: new Date().getFullYear() })}</p>
           <div className="industrial-footer-preferences">
