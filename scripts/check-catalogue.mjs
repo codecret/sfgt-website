@@ -8,7 +8,9 @@ const inventory = read("docs/source-audit/source-inventory.json");
 const specifications = read("docs/source-audit/original-specifications.json");
 const mapping = read("docs/source-audit/route-map.json");
 const assets = read("docs/source-audit/asset-manifest.json");
-const corrections = read("docs/source-audit/catalogue-corrections-2026-11-05.json");
+const corrections = read(
+  "docs/source-audit/catalogue-corrections-2026-11-05.json"
+);
 const correctionByProduct = new Map(
   corrections.map((correction) => [correction.productId, correction])
 );
@@ -23,7 +25,7 @@ const paths = new Set([
     (item) => `/products/${item.slug}`
   ),
 ]);
-assert.equal(data.products.length, 214);
+assert.equal(data.products.length, 226);
 assert.equal(data.categories.length, 64);
 assert.equal(
   new Set([...data.categories, ...data.products].map((item) => item.slug)).size,
@@ -35,8 +37,42 @@ assert.deepEqual(
     (division) =>
       data.products.filter((product) => product.division === division).length
   ),
-  [82, 65, 59, 8]
+  [82, 65, 59, 20]
 );
+const tekbatt = data.products.filter(
+  (product) => product.division === "tekbatt-batteries"
+);
+assert.deepEqual(
+  tekbatt.map((product) => product.productCode).sort(),
+  [
+    "01712",
+    "01714",
+    "01719",
+    "49777",
+    "49778",
+    "49779",
+    "49780",
+    "49781",
+    "49782",
+    "91557",
+    "91558",
+    "91559",
+    "91667",
+    "91775",
+    "91777",
+    "91778",
+    "91779",
+    "91780",
+    "92182",
+    "92183",
+  ],
+  "TEKBATT listings must match the article numbers on pages 3–5 of the client PDF"
+);
+for (const product of tekbatt) {
+  assert.deepEqual(product.images, [
+    `/images/catalogue/tekbatt/catalogue-${product.productCode}.webp`,
+  ]);
+}
 for (const source of inventory) {
   assert.ok(mapping[source.url], `Missing source route mapping: ${source.url}`);
   assert.ok(

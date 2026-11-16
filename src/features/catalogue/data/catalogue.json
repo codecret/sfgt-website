@@ -41,17 +41,17 @@
       },
       "parent": "",
       "description": {
-        "en": "Browse TEKBATT AA and AAA batteries in Super Heavy Duty, Alkaline Power, Rechargeable and General Purpose ranges.",
-        "ar": "تصفّح بطاريات TEKBATT بمقاسي AA وAAA، بما فيها البطاريات فائقة التحمل والقلوية والقابلة لإعادة الشحن وبطاريات الاستخدام العام."
+        "en": "Browse TEKBATT AA and AAA battery packs and the TEKBATT battery charger. Use the article number to identify the pack you need.",
+        "ar": "تصفّح عبوات بطاريات TEKBATT بمقاسي AA وAAA وشاحن البطاريات. استخدم رقم الصنف لتحديد العبوة المطلوبة."
       },
       "sources": [
-        "TEKBATT.pptx#slide3",
-        "TEKBATT.pptx#slide4",
-        "TEKBATT.pptx#slide5"
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3",
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=4",
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=5"
       ],
       "ranges": [],
-      "productCount": 8,
-      "image": "/images/catalogue/tekbatt/tekbatt-alkaline-power-aa-1.webp"
+      "productCount": 20,
+      "image": "/images/catalogue/tekbatt/catalogue-49779.webp"
     },
     {
       "slug": "commodities",
@@ -12824,216 +12824,142 @@
     {
       "id": "tekbatt-super-heavy-duty-aa",
       "slug": "tekbatt-super-heavy-duty-aa",
-      "name": "TEKBATT Super Heavy Duty AA",
+      "name": "TEKBATT Super Heavy Duty AA (10-pack)",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
-      "categoryPath": [
-        "tekbatt-batteries"
-      ],
+      "categoryPath": ["tekbatt-batteries"],
       "family": "Super Heavy Duty",
-      "sourceCategories": [
-        "تيكبات",
-        "بطاريات فائقة التحمل"
-      ],
-      "description": [],
-      "productCode": "",
+      "sourceCategories": ["تيكبات", "بطاريات فائقة التحمل"],
+      "description": ["10 AA batteries in a retail pack."],
+      "productCode": "91558",
       "sfgtCode": "",
       "tables": [],
       "benefits": [],
       "technical": [],
-      "images": [
-        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aa-1.webp",
-        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aa-2.webp",
-        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aa-3.webp",
-        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aa-4.webp",
-        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aa-5.webp",
-        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aa-6.webp",
-        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aa-7.webp"
-      ],
+      "images": ["/images/catalogue/tekbatt/catalogue-91558.webp"],
       "imageSources": [
-        "https://www.panhomestores.com/media/catalog/product/1/8/182TET9900084_02.jpg",
-        "https://www.panhomestores.com/media/catalog/product/1/8/182TET9900040_03_1.jpg",
-        "https://www.panhomestores.com/media/catalog/product/1/8/182TET9900042_03_1.jpg",
-        "https://www.panhomestores.com/media/catalog/product/1/8/182TET9900045_03_1.jpg",
-        "https://f.nooncdn.com/p/pzsku/Z760C0D504A9042EEB404Z/45/1746597140/df27e028-d1f1-4da3-b72f-03bababdab98.jpg",
-        "TEKBATT.pptx#ppt/media/image13.jpg",
-        "TEKBATT.pptx#ppt/media/image14.jpg"
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91558"
       ],
-      "sources": [
-        "TEKBATT.pptx#slide3"
-      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91558"],
       "downloads": [],
       "notes": []
     },
     {
       "id": "tekbatt-super-heavy-duty-aaa",
       "slug": "tekbatt-super-heavy-duty-aaa",
-      "name": "TEKBATT Super Heavy Duty AAA",
+      "name": "TEKBATT Super Heavy Duty AAA (10-pack)",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
-      "categoryPath": [
-        "tekbatt-batteries"
-      ],
+      "categoryPath": ["tekbatt-batteries"],
       "family": "Super Heavy Duty",
-      "sourceCategories": [
-        "تيكبات",
-        "بطاريات فائقة التحمل"
-      ],
-      "description": [],
-      "productCode": "",
+      "sourceCategories": ["تيكبات", "بطاريات فائقة التحمل"],
+      "description": ["10 AAA batteries in a retail pack."],
+      "productCode": "91559",
       "sfgtCode": "",
       "tables": [],
       "benefits": [],
       "technical": [],
-      "images": [
-        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aaa-1.webp",
-        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aaa-2.webp",
-        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aaa-3.webp",
-        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aaa-4.webp",
-        "/images/catalogue/tekbatt/tekbatt-super-heavy-duty-aaa-5.webp"
-      ],
+      "images": ["/images/catalogue/tekbatt/catalogue-91559.webp"],
       "imageSources": [
-        "https://www.panhomestores.com/media/catalog/product/1/8/182TET9900085_02.jpg",
-        "https://www.panhomestores.com/media/catalog/product/1/8/182TET9900041_03_1.jpg",
-        "TEKBATT.pptx#ppt/media/image7.jpg",
-        "https://daytoday.ae/manager/uploads/products/1016484/gallery/zoom/gallery443f8b55ab1f16fe797647b4d5f0667d1.webp",
-        "TEKBATT.pptx#ppt/media/image11.jpg"
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91559"
       ],
-      "sources": [
-        "TEKBATT.pptx#slide3"
-      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91559"],
       "downloads": [],
       "notes": []
     },
     {
       "id": "tekbatt-alkaline-power-aa",
       "slug": "tekbatt-alkaline-power-aa",
-      "name": "TEKBATT Alkaline Power AA",
+      "name": "TEKBATT Alkaline Power AA (4+2 Value Pack)",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
-      "categoryPath": [
-        "tekbatt-batteries"
-      ],
+      "categoryPath": ["tekbatt-batteries"],
       "family": "Alkaline Power",
-      "sourceCategories": [
-        "تيكبات",
-        "بطاريات قلوية"
-      ],
-      "description": [],
-      "productCode": "",
+      "sourceCategories": ["تيكبات", "بطاريات قلوية"],
+      "description": ["Six AA alkaline batteries in a 4+2 value pack."],
+      "productCode": "49779",
       "sfgtCode": "",
       "tables": [],
       "benefits": [],
       "technical": [],
-      "images": [
-        "/images/catalogue/tekbatt/tekbatt-alkaline-power-aa-1.webp",
-        "/images/catalogue/tekbatt/tekbatt-alkaline-power-aa-2.webp"
-      ],
+      "images": ["/images/catalogue/tekbatt/catalogue-49779.webp"],
       "imageSources": [
-        "TEKBATT.pptx#ppt/media/image25.png",
-        "TEKBATT.pptx#ppt/media/image23.jpeg"
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=5&article=49779"
       ],
-      "sources": [
-        "TEKBATT.pptx#slide5"
-      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=5&article=49779"],
       "downloads": [],
       "notes": []
     },
     {
       "id": "tekbatt-alkaline-power-aaa",
       "slug": "tekbatt-alkaline-power-aaa",
-      "name": "TEKBATT Alkaline Power AAA",
+      "name": "TEKBATT Alkaline Power AAA (4+2 Value Pack)",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
-      "categoryPath": [
-        "tekbatt-batteries"
-      ],
+      "categoryPath": ["tekbatt-batteries"],
       "family": "Alkaline Power",
-      "sourceCategories": [
-        "تيكبات",
-        "بطاريات قلوية"
-      ],
-      "description": [],
-      "productCode": "",
+      "sourceCategories": ["تيكبات", "بطاريات قلوية"],
+      "description": ["Six AAA alkaline batteries in a 4+2 value pack."],
+      "productCode": "49780",
       "sfgtCode": "",
       "tables": [],
       "benefits": [],
       "technical": [],
-      "images": [
-        "/images/catalogue/tekbatt/tekbatt-alkaline-power-aaa-1.webp",
-        "/images/catalogue/tekbatt/tekbatt-alkaline-power-aaa-2.webp"
-      ],
+      "images": ["/images/catalogue/tekbatt/catalogue-49780.webp"],
       "imageSources": [
-        "TEKBATT.pptx#ppt/media/image24.jpeg",
-        "TEKBATT.pptx#ppt/media/image26.jpeg"
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=5&article=49780"
       ],
-      "sources": [
-        "TEKBATT.pptx#slide5"
-      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=5&article=49780"],
       "downloads": [],
       "notes": []
     },
     {
       "id": "tekbatt-rechargeable-aa",
       "slug": "tekbatt-rechargeable-aa",
-      "name": "TEKBATT Rechargeable AA",
+      "name": "TEKBATT Rechargeable AA (2-pack)",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
-      "categoryPath": [
-        "tekbatt-batteries"
-      ],
+      "categoryPath": ["tekbatt-batteries"],
       "family": "Rechargeable",
-      "sourceCategories": [
-        "تيكبات",
-        "بطاريات قابلة لإعادة الشحن"
+      "sourceCategories": ["تيكبات", "بطاريات قابلة لإعادة الشحن"],
+      "description": [
+        "2 rechargeable AA batteries, rated at 1.2 V and 1000 mAh per battery."
       ],
-      "description": [],
-      "productCode": "",
+      "productCode": "01712",
       "sfgtCode": "",
       "tables": [],
       "benefits": [],
       "technical": [],
-      "images": [
-        "/images/catalogue/tekbatt/tekbatt-rechargeable-aa-1.webp"
-      ],
+      "images": ["/images/catalogue/tekbatt/catalogue-01712.webp"],
       "imageSources": [
-        "https://cdn.shopify.com/s/files/1/0713/7299/6857/files/tekbatt-aa-rechargeable-battery-12v-1000mah-pack-of-2batteriestekbattal-kabayel-discount-centre-647981.jpg?v=1748265147"
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=01712"
       ],
-      "sources": [
-        "TEKBATT.pptx#slide4"
-      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=01712"],
       "downloads": [],
       "notes": []
     },
     {
       "id": "tekbatt-rechargeable-aaa",
       "slug": "tekbatt-rechargeable-aaa",
-      "name": "TEKBATT Rechargeable AAA",
+      "name": "TEKBATT Rechargeable AAA (2-pack)",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
-      "categoryPath": [
-        "tekbatt-batteries"
-      ],
+      "categoryPath": ["tekbatt-batteries"],
       "family": "Rechargeable",
-      "sourceCategories": [
-        "تيكبات",
-        "بطاريات قابلة لإعادة الشحن"
+      "sourceCategories": ["تيكبات", "بطاريات قابلة لإعادة الشحن"],
+      "description": [
+        "2 rechargeable AAA batteries, rated at 1.2 V and 950 mAh per battery."
       ],
-      "description": [],
-      "productCode": "",
+      "productCode": "01719",
       "sfgtCode": "",
       "tables": [],
       "benefits": [],
       "technical": [],
-      "images": [
-        "/images/catalogue/tekbatt/tekbatt-rechargeable-aaa-1.webp"
-      ],
+      "images": ["/images/catalogue/tekbatt/catalogue-01719.webp"],
       "imageSources": [
-        "https://cdn.shopify.com/s/files/1/0713/7299/6857/files/tekbatt-aaa-rechargeable-battery-12v-950mah-pack-of-2batteriestekbattal-kabayel-discount-centre-329991.jpg?v=1748265146"
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=01719"
       ],
-      "sources": [
-        "TEKBATT.pptx#slide4"
-      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=01719"],
       "downloads": [],
       "notes": []
     },
@@ -13043,29 +12969,20 @@
       "name": "TEKBATT General Purpose AA (30-pack)",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
-      "categoryPath": [
-        "tekbatt-batteries"
-      ],
+      "categoryPath": ["tekbatt-batteries"],
       "family": "General Purpose",
-      "sourceCategories": [
-        "تيكبات",
-        "بطاريات للاستخدام العام"
-      ],
-      "description": [],
-      "productCode": "",
+      "sourceCategories": ["تيكبات", "بطاريات للاستخدام العام"],
+      "description": ["30 AA batteries in a value pack."],
+      "productCode": "91557",
       "sfgtCode": "",
       "tables": [],
       "benefits": [],
       "technical": [],
-      "images": [
-        "/images/catalogue/tekbatt/tekbatt-general-purpose-aa-1.webp"
-      ],
+      "images": ["/images/catalogue/tekbatt/catalogue-91557.webp"],
       "imageSources": [
-        "https://cdn.shopify.com/s/files/1/0625/5027/8191/files/pan-home-tekbatt-general-purpose-aa-battery-30-pieces-blue-182tet9900047-5.webp?v=1781874825"
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=91557"
       ],
-      "sources": [
-        "TEKBATT.pptx#slide4"
-      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=91557"],
       "downloads": [],
       "notes": []
     },
@@ -13075,29 +12992,296 @@
       "name": "TEKBATT General Purpose AAA (30-pack)",
       "division": "tekbatt-batteries",
       "category": "tekbatt-batteries",
-      "categoryPath": [
-        "tekbatt-batteries"
-      ],
+      "categoryPath": ["tekbatt-batteries"],
       "family": "General Purpose",
-      "sourceCategories": [
-        "تيكبات",
-        "بطاريات للاستخدام العام"
-      ],
-      "description": [],
-      "productCode": "",
+      "sourceCategories": ["تيكبات", "بطاريات للاستخدام العام"],
+      "description": ["30 AAA batteries in a value pack."],
+      "productCode": "91667",
       "sfgtCode": "",
       "tables": [],
       "benefits": [],
       "technical": [],
-      "images": [
-        "/images/catalogue/tekbatt/tekbatt-general-purpose-aaa-1.webp"
-      ],
+      "images": ["/images/catalogue/tekbatt/catalogue-91667.webp"],
       "imageSources": [
-        "https://cdn.shopify.com/s/files/1/0625/5027/8191/files/pan-home-tekbatt-general-purpose-aaa-battery-30-pieces-blue-182tet9900046-4.webp?v=1781874816"
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=91667"
       ],
-      "sources": [
-        "TEKBATT.pptx#slide4"
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=91667"],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-battery-charger",
+      "slug": "tekbatt-battery-charger",
+      "name": "TEKBATT Battery Charger",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": ["tekbatt-batteries"],
+      "family": "Charger",
+      "sourceCategories": ["تيكبات", "شواحن البطاريات"],
+      "description": ["TEKBATT battery charger, article 01714."],
+      "productCode": "01714",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": ["/images/catalogue/tekbatt/catalogue-01714.webp"],
+      "imageSources": [
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=01714"
       ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=01714"],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-super-heavy-duty-aa-2-pack",
+      "slug": "tekbatt-super-heavy-duty-aa-2-pack",
+      "name": "TEKBATT Super Heavy Duty AA (2-pack)",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": ["tekbatt-batteries"],
+      "family": "Super Heavy Duty",
+      "sourceCategories": ["تيكبات", "بطاريات فائقة التحمل"],
+      "description": ["2 AA batteries in a retail pack."],
+      "productCode": "91779",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": ["/images/catalogue/tekbatt/catalogue-91779.webp"],
+      "imageSources": [
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91779"
+      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91779"],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-super-heavy-duty-aaa-2-pack",
+      "slug": "tekbatt-super-heavy-duty-aaa-2-pack",
+      "name": "TEKBATT Super Heavy Duty AAA (2-pack)",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": ["tekbatt-batteries"],
+      "family": "Super Heavy Duty",
+      "sourceCategories": ["تيكبات", "بطاريات فائقة التحمل"],
+      "description": ["2 AAA batteries in a retail pack."],
+      "productCode": "91780",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": ["/images/catalogue/tekbatt/catalogue-91780.webp"],
+      "imageSources": [
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91780"
+      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91780"],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-super-heavy-duty-aa-4-pack",
+      "slug": "tekbatt-super-heavy-duty-aa-4-pack",
+      "name": "TEKBATT Super Heavy Duty AA (4-pack)",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": ["tekbatt-batteries"],
+      "family": "Super Heavy Duty",
+      "sourceCategories": ["تيكبات", "بطاريات فائقة التحمل"],
+      "description": ["4 AA batteries in a retail pack."],
+      "productCode": "49777",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": ["/images/catalogue/tekbatt/catalogue-49777.webp"],
+      "imageSources": [
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=49777"
+      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=49777"],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-super-heavy-duty-aaa-4-pack",
+      "slug": "tekbatt-super-heavy-duty-aaa-4-pack",
+      "name": "TEKBATT Super Heavy Duty AAA (4-pack)",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": ["tekbatt-batteries"],
+      "family": "Super Heavy Duty",
+      "sourceCategories": ["تيكبات", "بطاريات فائقة التحمل"],
+      "description": ["4 AAA batteries in a retail pack."],
+      "productCode": "49778",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": ["/images/catalogue/tekbatt/catalogue-49778.webp"],
+      "imageSources": [
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=49778"
+      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=49778"],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-super-heavy-duty-aa-6-pack",
+      "slug": "tekbatt-super-heavy-duty-aa-6-pack",
+      "name": "TEKBATT Super Heavy Duty AA (6-pack)",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": ["tekbatt-batteries"],
+      "family": "Super Heavy Duty",
+      "sourceCategories": ["تيكبات", "بطاريات فائقة التحمل"],
+      "description": ["6 AA batteries in a retail pack."],
+      "productCode": "92182",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": ["/images/catalogue/tekbatt/catalogue-92182.webp"],
+      "imageSources": [
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=92182"
+      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=92182"],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-super-heavy-duty-aaa-6-pack",
+      "slug": "tekbatt-super-heavy-duty-aaa-6-pack",
+      "name": "TEKBATT Super Heavy Duty AAA (6-pack)",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": ["tekbatt-batteries"],
+      "family": "Super Heavy Duty",
+      "sourceCategories": ["تيكبات", "بطاريات فائقة التحمل"],
+      "description": ["6 AAA batteries in a retail pack."],
+      "productCode": "92183",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": ["/images/catalogue/tekbatt/catalogue-92183.webp"],
+      "imageSources": [
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=92183"
+      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=92183"],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-super-heavy-duty-aa-20-pack",
+      "slug": "tekbatt-super-heavy-duty-aa-20-pack",
+      "name": "TEKBATT Super Heavy Duty AA (20-pack)",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": ["tekbatt-batteries"],
+      "family": "Super Heavy Duty",
+      "sourceCategories": ["تيكبات", "بطاريات فائقة التحمل"],
+      "description": ["20 AA batteries in a retail pack."],
+      "productCode": "91777",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": ["/images/catalogue/tekbatt/catalogue-91777.webp"],
+      "imageSources": [
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91777"
+      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91777"],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-super-heavy-duty-aaa-20-pack",
+      "slug": "tekbatt-super-heavy-duty-aaa-20-pack",
+      "name": "TEKBATT Super Heavy Duty AAA (20-pack)",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": ["tekbatt-batteries"],
+      "family": "Super Heavy Duty",
+      "sourceCategories": ["تيكبات", "بطاريات فائقة التحمل"],
+      "description": ["20 AAA batteries in a retail pack."],
+      "productCode": "91778",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": ["/images/catalogue/tekbatt/catalogue-91778.webp"],
+      "imageSources": [
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91778"
+      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91778"],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-super-heavy-duty-aa-60-pack",
+      "slug": "tekbatt-super-heavy-duty-aa-60-pack",
+      "name": "TEKBATT Super Heavy Duty AA (60-pack)",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": ["tekbatt-batteries"],
+      "family": "Super Heavy Duty",
+      "sourceCategories": ["تيكبات", "بطاريات فائقة التحمل"],
+      "description": ["60 AA batteries in a box."],
+      "productCode": "91775",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": ["/images/catalogue/tekbatt/catalogue-91775.webp"],
+      "imageSources": [
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91775"
+      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91775"],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-alkaline-power-aa-10-pack",
+      "slug": "tekbatt-alkaline-power-aa-10-pack",
+      "name": "TEKBATT Alkaline Power AA (10-pack)",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": ["tekbatt-batteries"],
+      "family": "Alkaline Power",
+      "sourceCategories": ["تيكبات", "بطاريات قلوية"],
+      "description": ["10 AA batteries in a retail pack."],
+      "productCode": "49781",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": ["/images/catalogue/tekbatt/catalogue-49781.webp"],
+      "imageSources": [
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=5&article=49781"
+      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=5&article=49781"],
+      "downloads": [],
+      "notes": []
+    },
+    {
+      "id": "tekbatt-alkaline-power-aaa-10-pack",
+      "slug": "tekbatt-alkaline-power-aaa-10-pack",
+      "name": "TEKBATT Alkaline Power AAA (10-pack)",
+      "division": "tekbatt-batteries",
+      "category": "tekbatt-batteries",
+      "categoryPath": ["tekbatt-batteries"],
+      "family": "Alkaline Power",
+      "sourceCategories": ["تيكبات", "بطاريات قلوية"],
+      "description": ["10 AAA batteries in a retail pack."],
+      "productCode": "49782",
+      "sfgtCode": "",
+      "tables": [],
+      "benefits": [],
+      "technical": [],
+      "images": ["/images/catalogue/tekbatt/catalogue-49782.webp"],
+      "imageSources": [
+        "TEKBATT_Complete_5_Page_Catalogue.pdf#page=5&article=49782"
+      ],
+      "sources": ["TEKBATT_Complete_5_Page_Catalogue.pdf#page=5&article=49782"],
       "downloads": [],
       "notes": []
     }

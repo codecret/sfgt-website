@@ -3056,5 +3056,165 @@
     "bytes": 123992,
     "retained": true,
     "processing": "AI-assisted photo restoration"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91558",
+    "path": "/images/catalogue/tekbatt/catalogue-91558.webp",
+    "bytes": 28928,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91559",
+    "path": "/images/catalogue/tekbatt/catalogue-91559.webp",
+    "bytes": 27808,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=5&article=49779",
+    "path": "/images/catalogue/tekbatt/catalogue-49779.webp",
+    "bytes": 46324,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=5&article=49780",
+    "path": "/images/catalogue/tekbatt/catalogue-49780.webp",
+    "bytes": 46418,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=01712",
+    "path": "/images/catalogue/tekbatt/catalogue-01712.webp",
+    "bytes": 26194,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=01719",
+    "path": "/images/catalogue/tekbatt/catalogue-01719.webp",
+    "bytes": 23584,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=91557",
+    "path": "/images/catalogue/tekbatt/catalogue-91557.webp",
+    "bytes": 44172,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=91667",
+    "path": "/images/catalogue/tekbatt/catalogue-91667.webp",
+    "bytes": 43254,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=4&article=01714",
+    "path": "/images/catalogue/tekbatt/catalogue-01714.webp",
+    "bytes": 17950,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91779",
+    "path": "/images/catalogue/tekbatt/catalogue-91779.webp",
+    "bytes": 15370,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91780",
+    "path": "/images/catalogue/tekbatt/catalogue-91780.webp",
+    "bytes": 15216,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=49777",
+    "path": "/images/catalogue/tekbatt/catalogue-49777.webp",
+    "bytes": 18396,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=49778",
+    "path": "/images/catalogue/tekbatt/catalogue-49778.webp",
+    "bytes": 16262,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=92182",
+    "path": "/images/catalogue/tekbatt/catalogue-92182.webp",
+    "bytes": 19456,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=92183",
+    "path": "/images/catalogue/tekbatt/catalogue-92183.webp",
+    "bytes": 18556,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91777",
+    "path": "/images/catalogue/tekbatt/catalogue-91777.webp",
+    "bytes": 29494,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91778",
+    "path": "/images/catalogue/tekbatt/catalogue-91778.webp",
+    "bytes": 24668,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=3&article=91775",
+    "path": "/images/catalogue/tekbatt/catalogue-91775.webp",
+    "bytes": 28178,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=5&article=49781",
+    "path": "/images/catalogue/tekbatt/catalogue-49781.webp",
+    "bytes": 55414,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
+  },
+  {
+    "source": "TEKBATT_Complete_5_Page_Catalogue.pdf#page=5&article=49782",
+    "path": "/images/catalogue/tekbatt/catalogue-49782.webp",
+    "bytes": 53978,
+    "retained": true,
+    "processing": "Pack artwork cropped from the client-supplied PDF",
+    "sourceSha256": "699d15ab993ef1e8b7649397bb690488439df02debde432eba00d3932ebaf19a"
   }
 ]
